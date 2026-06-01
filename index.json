@@ -52,9 +52,11 @@
         "rf"
       ],
       "source": "local",
-      "latest": "v1.0",
+      "latest": "v0.3.0",
       "versions": [
-        "v1.0"
+        "v0.1.0",
+        "v0.2.0",
+        "v0.3.0"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk"
