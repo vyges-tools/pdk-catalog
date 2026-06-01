@@ -92,6 +92,7 @@ def main():
     with open(INDEX) as f:
         idx = json.load(f)
 
+    before = json.dumps(idx["pdks"], sort_keys=True)
     tag_cache = {}
     for entry in idx["pdks"]:
         name = entry["name"]
@@ -113,11 +114,17 @@ def main():
         else:
             print("  %s: mirror=%s — versions hand-maintained" % (name, entry.get("mirror")))
 
+    idx["pdk_count"] = len(idx["pdks"])
+    after = json.dumps(idx["pdks"], sort_keys=True)
+    if after == before and idx.get("generated_sha"):
+        # Nothing substantive changed — leave the stamps (and the file) as-is so the
+        # daily run produces no diff / no commit.
+        print("no substantive change — index.json left untouched")
+        return
+
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     idx["generated_at"] = now
     idx["generated_sha"] = head_sha()
-    idx["pdk_count"] = len(idx["pdks"])
-
     with open(INDEX, "w") as f:
         json.dump(idx, f, indent=2)
         f.write("\n")
