@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-06-01T23:15:54Z",
-  "generated_sha": "5c61a530c8186ec425c97bf1b4092f400d4829b2",
+  "generated_at": "2026-06-01T23:16:39Z",
+  "generated_sha": "32dd17cea9a49cfaa30671d3646c0bef5a88a95c",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 6,
