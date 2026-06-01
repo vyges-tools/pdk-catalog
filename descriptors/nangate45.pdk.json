@@ -1,0 +1,40 @@
+{
+  "x-version": "1.0.0",
+  "version": "v1.3",
+  "name": "nangate45",
+  "node": "45nm",
+  "foundry": "Nangate",
+  "process": "CMOS (educational; FreePDK45 base tech)",
+  "design_types": ["digital"],
+  "source": "local",
+  "access": "open",
+  "root": "$ORFS/flow/platforms/nangate45",
+  "upstream": {
+    "mirror": "github.com/vyges-tools/nangate45",
+    "origin": "https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts",
+    "ref": "<pinned-tag>",
+    "license": "Apache-2.0 (NangateOpenCellLibrary terms)"
+  },
+  "default_corner": "typical",
+  "default_library": "NangateOpenCellLibrary",
+  "corners": [
+    { "name": "typical", "process": "tt", "vdd": 1.10, "temp": 25 },
+    { "name": "slow", "process": "ss", "vdd": 0.95, "temp": 125 },
+    { "name": "fast", "process": "ff", "vdd": 1.25, "temp": 0 }
+  ],
+  "cell_libraries": [
+    {
+      "name": "NangateOpenCellLibrary",
+      "lib": {
+        "typical": "lib/NangateOpenCellLibrary_typical.lib",
+        "slow": "lib/NangateOpenCellLibrary_slow.lib",
+        "fast": "lib/NangateOpenCellLibrary_fast.lib"
+      }
+    }
+  ],
+  "collateral": {
+    "tech_lef": "lef/NangateOpenCellLibrary.tech.lef",
+    "extract_rules": "$VYGES_PLUGIN/nangate45/nangate45.rules"
+  },
+  "description": "Nangate Open Cell Library on a generic 45nm (FreePDK45) tech — educational/research, single-Vt, three corners. No transistor models ship with the cell library, so corners[].models and cell_libraries[].spice are omitted (it is consumed as .lib + tech-LEF); SPICE-level char would need the FreePDK45 models. Canonical OpenROAD-flow-scripts platform layout; root illustrative. Mirrored under github.com/vyges-tools."
+}

@@ -1,0 +1,55 @@
+{
+  "x-version": "1.0.0",
+  "version": "r1p7",
+  "name": "asap7",
+  "node": "7nm",
+  "foundry": "ASU (ASAP7 predictive)",
+  "process": "FinFET (predictive; 7.5-track)",
+  "design_types": ["digital"],
+  "source": "local",
+  "access": "open",
+  "root": "$ASAP7_PDK",
+  "upstream": {
+    "mirror": "github.com/vyges-tools/asap7",
+    "origin": "https://github.com/The-OpenROAD-Project/asap7",
+    "ref": "<pinned-tag>",
+    "license": "BSD-3-Clause-ish (see ASAP7 license)"
+  },
+  "default_corner": "TT",
+  "default_library": "asap7sc7p5t_rvt",
+  "corners": [
+    { "name": "TT", "process": "tt", "vdd": 0.70, "temp": 25, "models": ["models/hspice/7nm_TT.pm"] },
+    { "name": "SS", "process": "ss", "vdd": 0.63, "temp": 100, "models": ["models/hspice/7nm_SS.pm"] },
+    { "name": "FF", "process": "ff", "vdd": 0.77, "temp": 0, "models": ["models/hspice/7nm_FF.pm"] }
+  ],
+  "cell_libraries": [
+    {
+      "name": "asap7sc7p5t_rvt", "vt": "RVT", "track": "7.5t",
+      "spice": "cdl/asap7sc7p5t_27_R_4x_211101.cdl",
+      "gds": "gds/asap7sc7p5t_27_R_4x_211101.gds",
+      "lef": "lef/asap7sc7p5t_27_R_4x_211101.lef",
+      "lib": {
+        "TT": ["lib/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib"],
+        "SS": ["lib/asap7sc7p5t_SIMPLE_RVT_SS_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_RVT_SS_nldm_220123.lib"],
+        "FF": ["lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib"]
+      }
+    },
+    {
+      "name": "asap7sc7p5t_lvt", "vt": "LVT", "track": "7.5t",
+      "spice": "cdl/asap7sc7p5t_28_L_4x_220111.cdl",
+      "gds": "gds/asap7sc7p5t_28_L_4x_220111.gds",
+      "lef": "lef/asap7sc7p5t_28_L_4x_220111.lef",
+      "lib": {
+        "TT": ["lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib"],
+        "SS": ["lib/asap7sc7p5t_SIMPLE_LVT_SS_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_LVT_SS_nldm_220123.lib"],
+        "FF": ["lib/asap7sc7p5t_SIMPLE_LVT_FF_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_LVT_FF_nldm_220123.lib"]
+      }
+    }
+  ],
+  "collateral": {
+    "tech_lef": "lef/asap7_tech_4x_201209.lef",
+    "primitives_spice": "models/hspice/7nm_TT.pm",
+    "extract_rules": "$VYGES_PLUGIN/asap7/asap7.rules"
+  },
+  "description": "ASAP7 predictive 7nm FinFET — research/education. Exercises the schema at an advanced node: MULTIPLE Vt cell_libraries (RVT + LVT shown; SLVT + SRAM also ship), split Liberty (per-cell-group files -> lib is an array; abbreviated here to SIMPLE+SEQ, the real PDK ships ~5 groups per corner per Vt), 3 corners, FinFET SPICE + BSIM-CMG models. GOTCHA: drawn at 4x scale (note the *_4x_* collateral) — any consuming flow must apply the 4x. Mirrored under github.com/vyges-tools; root + paths illustrative of asap7_pdk_r1p7."
+}

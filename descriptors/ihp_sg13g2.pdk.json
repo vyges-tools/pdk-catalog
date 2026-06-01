@@ -1,0 +1,47 @@
+{
+  "x-version": "1.0.0",
+  "version": "v1.0",
+  "name": "ihp_sg13g2",
+  "node": "130nm",
+  "foundry": "IHP",
+  "process": "SiGe BiCMOS (HBT)",
+  "design_types": ["digital", "analog", "mixed-signal", "rf"],
+  "source": "local",
+  "access": "open",
+  "root": "$IHP_PDK_ROOT/ihp-sg13g2",
+  "upstream": {
+    "mirror": "github.com/vyges-tools/ihp-open-pdk",
+    "origin": "https://github.com/ihp-gmbh/ihp-open-pdk",
+    "ref": "<pinned-tag>",
+    "license": "Apache-2.0 (IHP PDK terms)"
+  },
+  "default_corner": "typ_1p20V_25C",
+  "default_library": "sg13g2_stdcell",
+  "corners": [
+    { "name": "typ_1p20V_25C", "process": "tt", "vdd": 1.20, "temp": 25, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "slow_1p08V_125C", "process": "ss", "vdd": 1.08, "temp": 125, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "fast_1p32V_m40C", "process": "ff", "vdd": 1.32, "temp": -40, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] }
+  ],
+  "cell_libraries": [
+    {
+      "name": "sg13g2_stdcell",
+      "track": "core 1.2V",
+      "spice": "libs.ref/sg13g2_stdcell/cdl/sg13g2_stdcell.cdl",
+      "gds": "libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds",
+      "lef": "libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef",
+      "lib": {
+        "typ_1p20V_25C": "libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib",
+        "slow_1p08V_125C": "libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib",
+        "fast_1p32V_m40C": "libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_fast_1p32V_m40C.lib"
+      }
+    }
+  ],
+  "collateral": {
+    "tech_lef": "libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef",
+    "primitives_spice": "libs.tech/ngspice/models/sg13g2.lib",
+    "extract_rules": "$VYGES_PLUGIN/ihp-sg13g2/sg13g2.rules",
+    "drc_deck": "libs.tech/klayout/tech/drc/sg13g2_minimal.lydrc",
+    "lvs_deck": "libs.tech/klayout/tech/lvs/sg13g2.lvs"
+  },
+  "description": "Open IHP SG13G2 130nm SiGe BiCMOS (HBT) — IHP (Germany); a growing choice for open analog/RF with real shuttle access. Mirrored under github.com/vyges-tools. The HBT/RF devices live in the primitives; this descriptor presents the digital sg13g2_stdcell view (mixed-signal/RF via the device models). Name id uses underscore (ihp_sg13g2) per the descriptor name rule; the repo is ihp-open-pdk and root is its ihp-sg13g2 subdir. Paths illustrative."
+}

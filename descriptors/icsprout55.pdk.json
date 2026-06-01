@@ -1,0 +1,22 @@
+{
+  "x-version": "1.0.0",
+  "version": "v0.1",
+  "name": "icsprout55",
+  "node": "55nm",
+  "foundry": "icsprout",
+  "process": "CMOS",
+  "design_types": ["digital"],
+  "source": "local",
+  "access": "open",
+  "root": "/opt/pdk/icsprout55-pdk",
+  "upstream": {
+    "mirror": "github.com/vyges-tools/icsprout55",
+    "origin": "https://github.com/openecos-projects/icsprout55",
+    "ref": "<pinned-tag>",
+    "license": "see icsprout55 LICENSE"
+  },
+  "collateral": {
+    "tech_lef": "prtech/techLEF/N551P6M.lef"
+  },
+  "description": "A non-Ciel, on-disk open PDK (open-ecos icsprout55) — shown deliberately in BRING-UP state: only the technology LEF is presented today, so there are no corners[] or cell_libraries[] yet. Demonstrates two things: (1) a PDK with a completely different layout (prtech/ + IP/) than the Ciel sky130 tree still maps onto the same keys; (2) the descriptor describes WHAT EXISTS — a resolver errors only when a flow needs collateral that isn't presented yet. cell_libraries[] / corners[] are added as the icsprout55 std-cell .lib + SPICE collateral grows. Mirrored under github.com/vyges-tools."
+}

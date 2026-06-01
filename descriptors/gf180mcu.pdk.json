@@ -1,0 +1,42 @@
+{
+  "x-version": "1.0.0",
+  "version": "1.0.0",
+  "name": "gf180mcu",
+  "node": "180nm",
+  "foundry": "GlobalFoundries",
+  "process": "CMOS (5V MCU)",
+  "design_types": ["digital", "analog", "mixed-signal"],
+  "source": "local",
+  "access": "open",
+  "root": "$PDK_ROOT/gf180mcuD",
+  "upstream": { "mirror": "github.com/vyges-tools/open_pdks", "origin": "github.com/rtimothyedwards/open_pdks", "ref": "master", "license": "Apache-2.0" },
+  "default_corner": "tt_025C_5v00",
+  "default_library": "gf180mcu_fd_sc_mcu7t5v0",
+  "corners": [
+    { "name": "tt_025C_5v00", "process": "tt", "vdd": 5.00, "temp": 25, "models": ["libs.tech/ngspice/sm141064.ngspice"] },
+    { "name": "ss_n40C_4v50", "process": "ss", "vdd": 4.50, "temp": -40, "models": ["libs.tech/ngspice/sm141064.ngspice"] },
+    { "name": "ff_125C_5v50", "process": "ff", "vdd": 5.50, "temp": 125, "models": ["libs.tech/ngspice/sm141064.ngspice"] }
+  ],
+  "cell_libraries": [
+    {
+      "name": "gf180mcu_fd_sc_mcu7t5v0",
+      "track": "7-track 5V",
+      "spice": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice",
+      "gds": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/gds/gf180mcu_fd_sc_mcu7t5v0.gds",
+      "lef": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef",
+      "lib": {
+        "tt_025C_5v00": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib",
+        "ss_n40C_4v50": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_n40C_4v50.lib",
+        "ff_125C_5v50": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_125C_5v50.lib"
+      }
+    }
+  ],
+  "collateral": {
+    "tech_lef": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef",
+    "primitives_spice": "libs.ref/gf180mcu_fd_pr/spice/gf180mcu.spice",
+    "extract_rules": "$VYGES_PLUGIN/gf180mcu/gf180mcu.rules",
+    "drc_deck": "libs.tech/klayout/drc/gf180mcu.drc",
+    "lvs_deck": "libs.tech/klayout/lvs/gf180mcu.lvs"
+  },
+  "description": "Open GlobalFoundries 180nm MCU (5V), built from open_pdks (the same builder as sky130; mirrored under github.com/vyges-tools/open_pdks), installed under $PDK_ROOT/gf180mcuD. The 7-track 5V cell library is shown; gf180 also ships 9-track and other IO/voltage libraries as additional cell_libraries[]. Paths follow the open_pdks install layout."
+}
