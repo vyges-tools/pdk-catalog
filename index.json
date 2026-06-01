@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-06-01T22:53:42Z",
-  "generated_sha": null,
+  "generated_at": "2026-06-01T23:15:54Z",
+  "generated_sha": "5c61a530c8186ec425c97bf1b4092f400d4829b2",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 6,
@@ -22,7 +22,8 @@
         "1.0.0"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/sky130a.pdk.json",
-      "mirror": "github.com/vyges-tools/open_pdks"
+      "mirror": "github.com/vyges-tools/open_pdks",
+      "content_hash": "f9f5e89a59e87bdea8cef7c82885fa1aa1e732f5470582cad9fa68521df05dad"
     },
     {
       "name": "gf180mcu",
@@ -39,7 +40,8 @@
         "1.0.0"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/gf180mcu.pdk.json",
-      "mirror": "github.com/vyges-tools/open_pdks"
+      "mirror": "github.com/vyges-tools/open_pdks",
+      "content_hash": "60b55263f9e65ccd72576f4153b4f4bc3251fd04d5d8b567082026939b1da474"
     },
     {
       "name": "ihp_sg13g2",
@@ -59,7 +61,8 @@
         "v0.3.0"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.pdk.json",
-      "mirror": "github.com/vyges-tools/ihp-open-pdk"
+      "mirror": "github.com/vyges-tools/ihp-open-pdk",
+      "content_hash": "7fad36542f8876b38269fa77b067961f6a1126729a4d48380ef60592d915d7bc"
     },
     {
       "name": "nangate45",
@@ -74,7 +77,8 @@
         "v1.3"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/nangate45.pdk.json",
-      "mirror": "github.com/vyges-tools/nangate45"
+      "mirror": "github.com/vyges-tools/nangate45",
+      "content_hash": "2607e820edf63fc8e604279ea1d355b3545ab045b5962d2f6482b6d7d9e07302"
     },
     {
       "name": "asap7",
@@ -89,7 +93,8 @@
         "r1p7"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/asap7.pdk.json",
-      "mirror": "github.com/vyges-tools/asap7"
+      "mirror": "github.com/vyges-tools/asap7",
+      "content_hash": "633390ab094e44d6de06036061b48691481c065740144ed2564dd8e03b8f8e89"
     },
     {
       "name": "icsprout55",
@@ -104,7 +109,8 @@
         "v0.1"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/icsprout55.pdk.json",
-      "mirror": "github.com/vyges-tools/icsprout55"
+      "mirror": "github.com/vyges-tools/icsprout55",
+      "content_hash": "615216410afad4953f45a6f03ecd197e2532e4ba774cde8a97b089c00ed4d994"
     }
   ]
 }

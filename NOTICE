@@ -1,0 +1,13 @@
+Vyges PDK Catalog
+Copyright 2026 Vyges. All Rights Reserved.
+
+This repository contains an index (index.json) and PDK descriptors authored by
+Vyges (https://vyges.com), licensed under the Apache License, Version 2.0 (the
+"License"). You may obtain a copy of the License in the accompanying LICENSE file
+or at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+The descriptors reference third-party PDKs. Each referenced PDK is the property
+of its respective owner and remains governed by its own upstream license; this
+repository does not relicense PDK contents.

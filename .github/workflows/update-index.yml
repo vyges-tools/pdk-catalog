@@ -1,0 +1,48 @@
+name: Update PDK catalog index
+
+on:
+  schedule:
+    # Daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/gen_index.py'
+      - '.github/workflows/update-index.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-index
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout catalog
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Regenerate index.json from the maintained PDK mirror tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/gen_index.py
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name  'vyges-pdk-catalog-bot'
+          git config user.email 'noreply@vyges.com'
+          if [[ -n "$(git status --porcelain index.json)" ]]; then
+            git add index.json
+            git commit -m "index: refresh PDK versions $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          else
+            echo 'No changes — skipping commit.'
+          fi

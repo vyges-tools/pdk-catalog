@@ -23,13 +23,22 @@ Schema `vyges-pdk-catalog/index-v1`. One row per PDK — a lightweight summary p
 | `latest` / `versions[]` | the **version index** — newest known release + all known releases |
 | `descriptor_url` | raw URL of the full `*.pdk.json` (the "manifest_url") |
 | `mirror` | the Vyges data mirror, when one exists |
+| `content_hash` | sha256 of the descriptor (lets a client detect changes on refresh) |
 
 `latest` + `versions[]` are what let a client show "↑ vX.Y available" **without a live
 query** — the catalog *is* the version index.
 
-`generated_sha` is `null` while the catalog is hand-maintained; CI populates it (the
-catalog repo HEAD at generation time) once regeneration is automated, same as
-vyges-ip-catalog.
+## Regeneration
+
+`scripts/gen_index.py` regenerates `index.json` from the PDK mirror repos Vyges
+maintains: it refreshes `versions[]` / `latest` from each dedicated mirror's git tags,
+recomputes every `content_hash`, and stamps `generated_at` / `generated_sha` (the catalog
+HEAD at generation). `.github/workflows/update-index.yml` runs it **daily** (06:00 UTC,
+plus `workflow_dispatch`) and commits any change — the same pattern as vyges-ip-catalog.
+
+The shared [`open_pdks`](https://github.com/vyges-tools/open_pdks) builder is not used to
+version sky130/gf180 (its tags are build-system releases, not PDK versions), so those two
+stay hand-maintained.
 
 ## The PDKs
 
