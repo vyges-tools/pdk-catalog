@@ -1,6 +1,6 @@
 {
   "x-version": "1.0.0",
-  "version": "v0.1",
+  "version": "v1.10.100",
   "name": "icsprout55",
   "node": "55nm",
   "foundry": "icsprout",
@@ -11,9 +11,9 @@
   "root": "/opt/pdk/icsprout55-pdk",
   "upstream": {
     "mirror": "github.com/vyges-tools/icsprout55",
-    "origin": "https://github.com/openecos-projects/icsprout55",
-    "ref": "<pinned-tag>",
-    "license": "see icsprout55 LICENSE"
+    "origin": "https://github.com/openecos-projects/icsprout55-pdk",
+    "ref": "v1.10.100",
+    "license": "Apache-2.0"
   },
   "collateral": {
     "tech_lef": "prtech/techLEF/N551P6M.lef"
