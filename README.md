@@ -8,7 +8,7 @@ generated `index.json` for fast lookup, with each row pointing at the full manif
 ```
 pdk-catalog/
   index.json                    # the aggregated index (quick lookup + version index)
-  descriptors/<name>.pdk.json   # the full PDK descriptors (schema: vyges.com/schemas/pdk-spec/v1)
+  descriptors/<name>.vyges-pdk.json   # the full PDK descriptors (schema: vyges.com/schemas/pdk-spec/v1)
 ```
 
 ## index.json
@@ -21,7 +21,7 @@ Schema `vyges-pdk-catalog/index-v1`. One row per PDK — a lightweight summary p
 | `design_types` | `digital` / `analog` / `mixed-signal` / `rf` capability tags |
 | `source` | `ciel` (open registry) · `local` (mirror / on-disk) · `nda` |
 | `latest` / `versions[]` | the **version index** — newest known release + all known releases |
-| `descriptor_url` | raw URL of the full `*.pdk.json` (the "manifest_url") |
+| `descriptor_url` | raw URL of the full `*.vyges-pdk.json` (the "manifest_url") |
 | `mirror` | the Vyges data mirror, when one exists |
 | `content_hash` | sha256 of the descriptor (lets a client detect changes on refresh) |
 

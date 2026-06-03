@@ -8,6 +8,10 @@
   "design_types": ["digital", "analog", "mixed-signal", "rf"],
   "source": "local",
   "access": "open",
+  "license": "Apache-2.0",
+  "maintainers": [
+    { "name": "Vyges", "url": "https://vyges.com/contact", "github": "vyges" }
+  ],
   "root": "$IHP_PDK_ROOT/ihp-sg13g2",
   "upstream": {
     "mirror": "github.com/vyges-tools/ihp-open-pdk",

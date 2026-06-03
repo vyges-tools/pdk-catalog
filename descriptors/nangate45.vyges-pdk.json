@@ -8,6 +8,10 @@
   "design_types": ["digital"],
   "source": "local",
   "access": "open",
+  "license": "Apache-2.0",
+  "maintainers": [
+    { "name": "Vyges", "url": "https://vyges.com/contact", "github": "vyges" }
+  ],
   "root": "$ORFS/flow/platforms/nangate45",
   "upstream": {
     "mirror": "github.com/vyges-tools/nangate45",

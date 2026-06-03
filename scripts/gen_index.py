@@ -96,7 +96,7 @@ def main():
     tag_cache = {}
     for entry in idx["pdks"]:
         name = entry["name"]
-        descriptor = os.path.join(DESCRIPTORS, name + ".pdk.json")
+        descriptor = os.path.join(DESCRIPTORS, name + ".vyges-pdk.json")
         if os.path.exists(descriptor):
             entry["content_hash"] = sha256_file(descriptor)
 

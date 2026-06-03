@@ -8,6 +8,10 @@
   "design_types": ["digital", "analog", "mixed-signal"],
   "source": "local",
   "access": "open",
+  "license": "Apache-2.0",
+  "maintainers": [
+    { "name": "Vyges", "url": "https://vyges.com/contact", "github": "vyges" }
+  ],
   "root": "$PDK_ROOT/gf180mcuD",
   "upstream": { "mirror": "github.com/vyges-tools/open_pdks", "origin": "github.com/rtimothyedwards/open_pdks", "ref": "master", "license": "Apache-2.0" },
   "default_corner": "tt_025C_5v00",
