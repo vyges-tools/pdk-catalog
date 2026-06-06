@@ -8,7 +8,7 @@ generated `index.json` for fast lookup, with each row pointing at the full manif
 ```
 pdk-catalog/
   index.json                    # the aggregated index (quick lookup + version index)
-  descriptors/<name>.vyges-pdk.json   # the full PDK descriptors (schema: vyges.com/schemas/pdk-spec/v1)
+  descriptors/<name>.vyges-pdk.json   # the full PDK descriptors (schema: vyges.com/schema/v1/vyges-pdk.schema.json)
 ```
 
 ## index.json
