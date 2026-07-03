@@ -18,35 +18,105 @@
       "github": "vyges"
     }
   ],
-  "root": "/opt/pdk/icsprout55-pdk",
+  "root": "$ICSPROUT55_PDK",
   "upstream": {
     "mirror": "github.com/vyges-tools/icsprout55",
     "origin": "https://github.com/openecos-projects/icsprout55-pdk",
     "ref": "v1.10.100",
     "license": "Apache-2.0"
   },
-  "default_corner": "tt_025C_1v20",
+  "default_corner": "tt_typ_025C_1v20",
   "default_library": "ics55_LLSC_H7CR",
   "corners": [
     {
-      "name": "tt_025C_1v20",
+      "name": "tt_typ_025C_1v20",
       "process": "tt",
       "vdd": 1.2,
       "temp": 25,
       "models": []
     },
     {
-      "name": "ss_125C_1v08",
+      "name": "ss_cworst_n40C_1v08",
+      "process": "ss",
+      "vdd": 1.08,
+      "temp": -40,
+      "models": []
+    },
+    {
+      "name": "ss_rcworst_125C_1v08",
       "process": "ss",
       "vdd": 1.08,
       "temp": 125,
       "models": []
     },
     {
-      "name": "ff_n40C_1v32",
+      "name": "ss_rcworst_n40C_1v20",
+      "process": "ss",
+      "vdd": 1.2,
+      "temp": -40,
+      "models": []
+    },
+    {
+      "name": "ff_cbest_125C_1v32",
+      "process": "ff",
+      "vdd": 1.32,
+      "temp": 125,
+      "models": []
+    },
+    {
+      "name": "ff_rcbest_125C_1v08",
+      "process": "ff",
+      "vdd": 1.08,
+      "temp": 125,
+      "models": []
+    },
+    {
+      "name": "ff_rcbest_n40C_1v32",
       "process": "ff",
       "vdd": 1.32,
       "temp": -40,
+      "models": []
+    },
+    {
+      "name": "io_tt_025C_1v20_3v30",
+      "process": "tt",
+      "vdd": 1.2,
+      "temp": 25,
+      "models": []
+    },
+    {
+      "name": "io_ss_125C_1v08_2v97",
+      "process": "ss",
+      "vdd": 1.08,
+      "temp": 125,
+      "models": []
+    },
+    {
+      "name": "io_ss_n40C_1v08_2v97",
+      "process": "ss",
+      "vdd": 1.08,
+      "temp": -40,
+      "models": []
+    },
+    {
+      "name": "io_ff_125C_1v32_3v63",
+      "process": "ff",
+      "vdd": 1.32,
+      "temp": 125,
+      "models": []
+    },
+    {
+      "name": "io_ff_n40C_1v32_3v63",
+      "process": "ff",
+      "vdd": 1.32,
+      "temp": -40,
+      "models": []
+    },
+    {
+      "name": "io_ff_000C_1v32_3v63",
+      "process": "ff",
+      "vdd": 1.32,
+      "temp": 0,
       "models": []
     }
   ],
@@ -56,41 +126,68 @@
       "vt": "RVT",
       "track": "H7C",
       "lef": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR.lef",
-      "cdl": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/cdl/ics55_LLSC_H7CR.cdl",
-      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/verilog/ics55_LLSC_H7CR.v"
+      "gds": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/gds/ics55_LLSC_H7CR.gds",
+      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/verilog/ics55_LLSC_H7CR.v",
+      "lib": {
+        "tt_typ_025C_1v20": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_typ_tt_1p2_25_nldm.lib",
+        "ss_cworst_n40C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_cworst_1p08_m40_nldm.lib",
+        "ss_rcworst_125C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p08_125_nldm.lib",
+        "ss_rcworst_n40C_1v20": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ss_rcworst_1p2_m40_nldm.lib",
+        "ff_cbest_125C_1v32": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ff_cbest_1p32_125_nldm.lib",
+        "ff_rcbest_125C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ff_rcbest_1p08_125_nldm.lib",
+        "ff_rcbest_n40C_1v32": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/liberty/ics55_LLSC_H7CR_ff_rcbest_1p32_m40_nldm.lib"
+      }
     },
     {
       "name": "ics55_LLSC_H7CH",
       "vt": "HVT",
       "track": "H7C",
       "lef": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/lef/ics55_LLSC_H7CH.lef",
-      "cdl": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/cdl/ics55_LLSC_H7CH.cdl",
-      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/verilog/ics55_LLSC_H7CH.v"
+      "gds": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/gds/ics55_LLSC_H7CH.gds",
+      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/verilog/ics55_LLSC_H7CH.v",
+      "lib": {
+        "tt_typ_025C_1v20": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_typ_tt_1p2_25_nldm.lib",
+        "ss_cworst_n40C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_ss_cworst_1p08_m40_nldm.lib",
+        "ss_rcworst_125C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_ss_rcworst_1p08_125_nldm.lib",
+        "ss_rcworst_n40C_1v20": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_ss_rcworst_1p2_m40_nldm.lib",
+        "ff_cbest_125C_1v32": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_ff_cbest_1p32_125_nldm.lib",
+        "ff_rcbest_125C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_ff_rcbest_1p08_125_nldm.lib",
+        "ff_rcbest_n40C_1v32": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/liberty/ics55_LLSC_H7CH_ff_rcbest_1p32_m40_nldm.lib"
+      }
     },
     {
       "name": "ics55_LLSC_H7CL",
       "vt": "LVT",
       "track": "H7C",
       "lef": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL.lef",
-      "cdl": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/cdl/ics55_LLSC_H7CL.cdl",
-      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/verilog/ics55_LLSC_H7CL.v"
+      "gds": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/gds/ics55_LLSC_H7CL.gds",
+      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/verilog/ics55_LLSC_H7CL.v",
+      "lib": {
+        "tt_typ_025C_1v20": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_typ_tt_1p2_25_nldm.lib",
+        "ss_cworst_n40C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_cworst_1p08_m40_nldm.lib",
+        "ss_rcworst_125C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_rcworst_1p08_125_nldm.lib",
+        "ss_rcworst_n40C_1v20": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ss_rcworst_1p2_m40_nldm.lib",
+        "ff_cbest_125C_1v32": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ff_cbest_1p32_125_nldm.lib",
+        "ff_rcbest_125C_1v08": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ff_rcbest_1p08_125_nldm.lib",
+        "ff_rcbest_n40C_1v32": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/liberty/ics55_LLSC_H7CL_ff_rcbest_1p32_m40_nldm.lib"
+      }
     },
     {
       "name": "ICsprout_55LLULP1233_IO",
-      "role": "io",
       "lef": "IP/IO/ICsprout_55LLULP1233_IO_251013/lef/ICSIOA_N55_3P3_1P6M1TM.lef",
+      "gds": "IP/IO/ICsprout_55LLULP1233_IO_251013/gds/ICSIOA_N55_3P3_1P6M1TM.gds",
       "lib": {
-        "tt_025C_1v20_3v30": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_tt_1p2_3p3_25c.lib",
-        "ss_125C_1v08_2v97": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ss_1p08_2p97_125c.lib",
-        "ss_n40C_1v08_2v97": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ss_1p08_2p97_m40c.lib",
-        "ff_125C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63_125c.lib",
-        "ff_n40C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63_m40c.lib",
-        "ff_000C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63v_0c.lib"
+        "io_tt_025C_1v20_3v30": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_tt_1p2_3p3_25c.lib",
+        "io_ss_125C_1v08_2v97": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ss_1p08_2p97_125c.lib",
+        "io_ss_n40C_1v08_2v97": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ss_1p08_2p97_m40c.lib",
+        "io_ff_125C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63_125c.lib",
+        "io_ff_n40C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63_m40c.lib",
+        "io_ff_000C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63v_0c.lib"
       }
     }
   ],
   "collateral": {
     "tech_lef": "prtech/techLEF/N551P6M.lef"
   },
-  "description": "Non-Ciel, on-disk open PDK (open-ecos icsprout55). Enriched beyond tech-LEF: std-cell LEF/CDL/Verilog for three Vt flavors (RVT/HVT/LVT, the H7C library) plus the IO library (LEF + Liberty across tt/ss/ff corners) are now presented, so the PDK is PLACE-ABLE (LEF-driven P&R). corners[] declares the three core PVT corners (V1.08/1.20/1.32) the std cells are characterized at (per the H7C TYPICAL_V1P2_T25 datasheet). NOT YET PRESENTED (gates full sign-off): std-cell timing .lib and .gds are download-on-demand via `make unzip` (large files, not in the git mirror) \u2014 added to cell_libraries[].lib once materialized on the install root; and SPICE/RC models + DRC/LVS decks are not yet released upstream, so STA-corner timing, extraction, and DRC/LVS remain gated. The descriptor describes WHAT EXISTS; a resolver errors only when a flow needs collateral not yet presented. Mirrored under github.com/vyges-tools."
+  "description": "Open-ecos icsprout55 55nm PDK (non-Ciel, on-disk). Materialized: tech-LEF + std-cell (RVT/HVT/LVT, H7C) LEF/GDS/Verilog + 7-corner NLDM Liberty (tt/ss/ff with cworst/rcworst/cbest/rcbest RC variants) + IO LEF/GDS/Liberty -> place + STA-signoff-able. Large .lib/.gds are release assets fetched by `make unzip` into $ICSPROUT55_PDK (git mirror carries LEF/CDL/Verilog + the fetch mechanism). Not yet upstream: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated. Mirrored under github.com/vyges-tools."
 }
