@@ -57,7 +57,7 @@ availability, and a consistent data home. sky130 and gf180 are built from the mi
 [rtimothyedwards/open_pdks](https://github.com/rtimothyedwards/open_pdks)) and installed
 under `$PDK_ROOT`.
 
-> **`icsprout55`** — the most advanced open node (55nm; ICsprout + College of IC, Zhejiang University + CAS/ECOS). The descriptor is now **fully enriched**: 3 std-cell Vt flavors (RVT/HVT/LVT, H7C) with LEF/GDS/Verilog + a **7-corner NLDM Liberty** set (tt/ss/ff × cworst/rcworst/cbest/rcbest) and the IO library — **13 corners, 4 libraries**, `verify`-clean → **place + STA-sign-off-able**. The large `.lib`/`.gds` are release assets materialized by `make unzip` into `$ICSPROUT55_PDK` (the git mirror carries LEF/CDL/Verilog + the fetch mechanism). Still upstream-pending: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated.
+> **`icsprout55`** — the most advanced open node (55nm; ICsprout + College of IC, Zhejiang University + CAS/ECOS). The descriptor is now **fully enriched**: 3 std-cell Vt flavors (RVT/HVT/LVT, H7C) with LEF/GDS/Verilog + a **7-corner NLDM Liberty** set (tt/ss/ff × cworst/rcworst/cbest/rcbest) and the IO library — **13 corners, 4 libraries**, `verify`-clean → **place + STA-sign-off-able**. The large `.lib`/`.gds` are release assets materialized by `make unzip` into `$ICSPROUT55_PDK` (the git mirror carries LEF/CDL/Verilog + the fetch mechanism). Still upstream-pending: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated. **Loom STA smoke-test PASSED (2026-07-03):** Yosys synthesized a design to icsprout55 cells and `vyges-sta-si` timed it against the icsprout55 Liberty — real setup path, WNS MET, TNS 0. Synth/place/STA work on this PDK today; extract/DRC/LVS await the R/C + decks above.
 
 ## Consuming it
 
