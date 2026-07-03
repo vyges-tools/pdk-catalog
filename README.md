@@ -57,6 +57,8 @@ availability, and a consistent data home. sky130 and gf180 are built from the mi
 [rtimothyedwards/open_pdks](https://github.com/rtimothyedwards/open_pdks)) and installed
 under `$PDK_ROOT`.
 
+> **`icsprout55` is the newest, least-mature entry** — the most advanced open node (55nm; ICsprout + College of IC, Zhejiang University + CAS/ECOS) but in bring-up. The descriptor now presents std-cell **LEF/CDL/Verilog** (RVT/HVT/LVT, the H7C library) + the **IO Liberty** (tt/ss/ff corners), so it is **place-able** (LEF-driven P&R). Std-cell timing `.lib`/`.gds` are download-on-demand via `make unzip` (not in the git mirror), and SPICE/RC models + DRC/LVS decks are **not yet released upstream** — so STA-corner timing, extraction, and DRC/LVS remain **gated**. See the descriptor `description` for the current collateral state.
+
 ## Consuming it
 
 `vyges pdk-store` ships a cached snapshot of `index.json` compiled into the binary and
