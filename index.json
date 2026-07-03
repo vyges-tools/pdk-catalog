@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-06-03T03:57:03Z",
-  "generated_sha": "727298181935d2bd857402f67936969f89020b87",
+  "generated_at": "2026-07-03T15:28:31Z",
+  "generated_sha": "7de6c6c6c8099f793d7dc3c70c4bc1ce5e8db839",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 6,
@@ -110,7 +110,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/icsprout55.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/icsprout55",
-      "content_hash": "0fdf915d82c68382c33c0447508a9c53af314b97e9afb2cf99c4aea5c41c3641"
+      "content_hash": "0b32992221c9b91795c73c86d2bde54bbe44f8853bac4282fac96ecf16f2f08e"
     }
   ]
 }

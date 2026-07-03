@@ -5,12 +5,18 @@
   "node": "55nm",
   "foundry": "icsprout",
   "process": "CMOS",
-  "design_types": ["digital"],
+  "design_types": [
+    "digital"
+  ],
   "source": "local",
   "access": "open",
   "license": "Apache-2.0",
   "maintainers": [
-    { "name": "Vyges", "url": "https://vyges.com/contact", "github": "vyges" }
+    {
+      "name": "Vyges",
+      "url": "https://vyges.com/contact",
+      "github": "vyges"
+    }
   ],
   "root": "/opt/pdk/icsprout55-pdk",
   "upstream": {
@@ -19,8 +25,72 @@
     "ref": "v1.10.100",
     "license": "Apache-2.0"
   },
+  "default_corner": "tt_025C_1v20",
+  "default_library": "ics55_LLSC_H7CR",
+  "corners": [
+    {
+      "name": "tt_025C_1v20",
+      "process": "tt",
+      "vdd": 1.2,
+      "temp": 25,
+      "models": []
+    },
+    {
+      "name": "ss_125C_1v08",
+      "process": "ss",
+      "vdd": 1.08,
+      "temp": 125,
+      "models": []
+    },
+    {
+      "name": "ff_n40C_1v32",
+      "process": "ff",
+      "vdd": 1.32,
+      "temp": -40,
+      "models": []
+    }
+  ],
+  "cell_libraries": [
+    {
+      "name": "ics55_LLSC_H7CR",
+      "vt": "RVT",
+      "track": "H7C",
+      "lef": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/lef/ics55_LLSC_H7CR.lef",
+      "cdl": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/cdl/ics55_LLSC_H7CR.cdl",
+      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CR/verilog/ics55_LLSC_H7CR.v"
+    },
+    {
+      "name": "ics55_LLSC_H7CH",
+      "vt": "HVT",
+      "track": "H7C",
+      "lef": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/lef/ics55_LLSC_H7CH.lef",
+      "cdl": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/cdl/ics55_LLSC_H7CH.cdl",
+      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CH/verilog/ics55_LLSC_H7CH.v"
+    },
+    {
+      "name": "ics55_LLSC_H7CL",
+      "vt": "LVT",
+      "track": "H7C",
+      "lef": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/lef/ics55_LLSC_H7CL.lef",
+      "cdl": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/cdl/ics55_LLSC_H7CL.cdl",
+      "verilog": "IP/STD_cell/ics55_LLSC_H7C_V1p10C100/ics55_LLSC_H7CL/verilog/ics55_LLSC_H7CL.v"
+    },
+    {
+      "name": "ICsprout_55LLULP1233_IO",
+      "role": "io",
+      "lef": "IP/IO/ICsprout_55LLULP1233_IO_251013/lef/ICSIOA_N55_3P3_1P6M1TM.lef",
+      "lib": {
+        "tt_025C_1v20_3v30": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_tt_1p2_3p3_25c.lib",
+        "ss_125C_1v08_2v97": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ss_1p08_2p97_125c.lib",
+        "ss_n40C_1v08_2v97": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ss_1p08_2p97_m40c.lib",
+        "ff_125C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63_125c.lib",
+        "ff_n40C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63_m40c.lib",
+        "ff_000C_1v32_3v63": "IP/IO/ICsprout_55LLULP1233_IO_251013/liberty/ICSIOA_N55_3P3_ff_1p32_3p63v_0c.lib"
+      }
+    }
+  ],
   "collateral": {
     "tech_lef": "prtech/techLEF/N551P6M.lef"
   },
-  "description": "A non-Ciel, on-disk open PDK (open-ecos icsprout55) — shown deliberately in BRING-UP state: only the technology LEF is presented today, so there are no corners[] or cell_libraries[] yet. Demonstrates two things: (1) a PDK with a completely different layout (prtech/ + IP/) than the Ciel sky130 tree still maps onto the same keys; (2) the descriptor describes WHAT EXISTS — a resolver errors only when a flow needs collateral that isn't presented yet. cell_libraries[] / corners[] are added as the icsprout55 std-cell .lib + SPICE collateral grows. Mirrored under github.com/vyges-tools."
+  "description": "Non-Ciel, on-disk open PDK (open-ecos icsprout55). Enriched beyond tech-LEF: std-cell LEF/CDL/Verilog for three Vt flavors (RVT/HVT/LVT, the H7C library) plus the IO library (LEF + Liberty across tt/ss/ff corners) are now presented, so the PDK is PLACE-ABLE (LEF-driven P&R). corners[] declares the three core PVT corners (V1.08/1.20/1.32) the std cells are characterized at (per the H7C TYPICAL_V1P2_T25 datasheet). NOT YET PRESENTED (gates full sign-off): std-cell timing .lib and .gds are download-on-demand via `make unzip` (large files, not in the git mirror) \u2014 added to cell_libraries[].lib once materialized on the install root; and SPICE/RC models + DRC/LVS decks are not yet released upstream, so STA-corner timing, extraction, and DRC/LVS remain gated. The descriptor describes WHAT EXISTS; a resolver errors only when a flow needs collateral not yet presented. Mirrored under github.com/vyges-tools."
 }
