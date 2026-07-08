@@ -38,7 +38,7 @@
   "collateral": {
     "tech_lef": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef",
     "primitives_spice": "libs.ref/gf180mcu_fd_pr/spice/gf180mcu.spice",
-    "extract_rules": "$VYGES_PLUGIN/gf180mcu/gf180mcu.rules",
+    "extract_rules": "vyges-additions/gf180mcu/vyges-extract.rules",
     "drc_deck": "libs.tech/klayout/drc/gf180mcu.drc",
     "lvs_deck": "libs.tech/klayout/lvs/gf180mcu.lvs"
   },

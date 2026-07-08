@@ -53,7 +53,7 @@
   "collateral": {
     "tech_lef": "lef/asap7_tech_4x_201209.lef",
     "primitives_spice": "models/hspice/7nm_TT.pm",
-    "extract_rules": "$VYGES_PLUGIN/asap7/asap7.rules"
+    "extract_rules": "vyges-additions/asap7/vyges-extract.rules"
   },
   "description": "ASAP7 predictive 7nm FinFET — research/education. Exercises the schema at an advanced node: MULTIPLE Vt cell_libraries (RVT + LVT shown; SLVT + SRAM also ship), split Liberty (per-cell-group files -> lib is an array; abbreviated here to SIMPLE+SEQ, the real PDK ships ~5 groups per corner per Vt), 3 corners, FinFET SPICE + BSIM-CMG models. GOTCHA: drawn at 4x scale (note the *_4x_* collateral) — any consuming flow must apply the 4x. Mirrored under github.com/vyges-tools; root + paths illustrative of asap7_pdk_r1p7."
 }

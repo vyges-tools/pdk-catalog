@@ -23,7 +23,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/sky130a.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/open_pdks",
-      "content_hash": "b5523daa992e5cf038d0a0d769630317b9b8ef6d840c45188bcb049afbe00b3f"
+      "content_hash": "55b0b5d8c201886cd637e6699b627d4bb7c2c01d7c0ef76313f2e6011867f8dd"
     },
     {
       "name": "gf180mcu",
@@ -41,7 +41,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/gf180mcu.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/open_pdks",
-      "content_hash": "751450b1c8ba6e9860785b02930a0860546dedb81634c005845ec86777beae88"
+      "content_hash": "9d9dab37d244c91af422a7b0bbf48c9762be661e690f7f9722ffb9acb86b77f1"
     },
     {
       "name": "ihp_sg13g2",
@@ -62,7 +62,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "e611e14644c13bdb72f44e156ad9827f39aa6f63d9ed81de14ae8061553e1a23"
+      "content_hash": "83c2d5c9e990cfa84b66ba130d55053a0ce6f0e94fd2818d9099aa8d19c47ecb"
     },
     {
       "name": "nangate45",
@@ -78,7 +78,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/nangate45.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/nangate45",
-      "content_hash": "9d801c96f998c3955138157174a315bf491de6460a412443027c38eb2fe88cb3"
+      "content_hash": "5a2ced5541c6b633f95daf84e172c87f8f909ee0b04dff145ec0a4de3980f6d2"
     },
     {
       "name": "asap7",
@@ -94,7 +94,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/asap7.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/asap7",
-      "content_hash": "757db76855c47b31a3d22ffe276c66e525764723c3239249b35aab3fbc0591ca"
+      "content_hash": "d38c3f7bebdc8975489a5226a40295ae8a2bcbb39a8d4f3162a4c748180d8632"
     },
     {
       "name": "icsprout55",

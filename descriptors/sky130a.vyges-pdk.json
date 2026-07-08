@@ -38,9 +38,9 @@
   "collateral": {
     "tech_lef": "libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef",
     "primitives_spice": "libs.ref/sky130_fd_pr/spice/sky130.lib.spice",
-    "extract_rules": "$VYGES_PLUGIN/sky130/sky130_cal.rules",
+    "extract_rules": "vyges-additions/sky130a/vyges-extract.rules",
     "drc_deck": "libs.tech/klayout/drc/sky130A_mr.drc",
     "lvs_deck": "libs.tech/netgen/sky130A_setup.tcl"
   },
-  "description": "Open sky130A, built from open_pdks (mirrored under github.com/vyges-tools/open_pdks; origin rtimothyedwards/open_pdks), installed under $PDK_ROOT/sky130A (single library shown: sky130_fd_sc_hd; the PDK also ships hvl/hs/ms/ls/lp/hdll as additional cell_libraries[] entries). extract_rules points at externally-supplied extraction rules via the $VYGES_PLUGIN path; paths under root follow the open_pdks install layout."
+  "description": "Open sky130A, built from open_pdks (mirrored under github.com/vyges-tools/open_pdks; origin rtimothyedwards/open_pdks), installed under $PDK_ROOT/sky130A (single library shown: sky130_fd_sc_hd; the PDK also ships hvl/hs/ms/ls/lp/hdll as additional cell_libraries[] entries). extract_rules is Vyges-authored collateral colocated with the descriptor under vyges-additions/sky130a/; paths under root follow the open_pdks install layout."
 }

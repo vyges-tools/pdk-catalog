@@ -43,7 +43,7 @@
   "collateral": {
     "tech_lef": "libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef",
     "primitives_spice": "libs.tech/ngspice/models/sg13g2.lib",
-    "extract_rules": "$VYGES_PLUGIN/ihp-sg13g2/sg13g2.rules",
+    "extract_rules": "vyges-additions/ihp_sg13g2/vyges-extract.rules",
     "drc_deck": "libs.tech/klayout/tech/drc/sg13g2_minimal.lydrc",
     "lvs_deck": "libs.tech/klayout/tech/lvs/sg13g2.lvs"
   },
