@@ -1,0 +1,57 @@
+{
+  "x-version": "1.0.0",
+  "version": "v0.2.0",
+  "name": "ihp_sg13cmos5l",
+  "node": "130nm",
+  "foundry": "IHP",
+  "process": "CMOS (CMOS-only, simplified 5-level-metal variant of SG13; no SiGe HBT)",
+  "design_types": ["digital", "analog", "mixed-signal"],
+  "source": "local",
+  "access": "open",
+  "license": "Apache-2.0",
+  "maintainers": [
+    { "name": "Vyges", "url": "https://vyges.com/contact", "github": "vyges" }
+  ],
+  "root": "$IHP_PDK_ROOT/ihp-sg13cmos5l",
+  "upstream": {
+    "mirror": "github.com/vyges-tools/ihp-sg13cmos5l",
+    "origin": "https://github.com/IHP-GmbH/ihp-sg13cmos5l",
+    "ref": "v0.2.0",
+    "license": "Apache-2.0 (IHP PDK terms)"
+  },
+  "default_corner": "typ_1p20V_25C",
+  "default_library": "sg13cmos5l_stdcell",
+  "corners": [
+    { "name": "typ_1p20V_25C", "process": "tt", "vdd": 1.20, "temp": 25, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "typ_1p50V_25C", "process": "tt", "vdd": 1.50, "temp": 25, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "slow_1p08V_125C", "process": "ss", "vdd": 1.08, "temp": 125, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "slow_1p35V_125C", "process": "ss", "vdd": 1.35, "temp": 125, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "fast_1p32V_m40C", "process": "ff", "vdd": 1.32, "temp": -40, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] },
+    { "name": "fast_1p65V_m40C", "process": "ff", "vdd": 1.65, "temp": -40, "models": ["libs.tech/ngspice/models/cornerMOSlv.lib"] }
+  ],
+  "cell_libraries": [
+    {
+      "name": "sg13cmos5l_stdcell",
+      "track": "core 1.2V / 1.5V",
+      "spice": "libs.ref/sg13cmos5l_stdcell/cdl/sg13cmos5l_stdcell.cdl",
+      "gds": "libs.ref/sg13cmos5l_stdcell/gds/sg13cmos5l_stdcell.gds",
+      "lef": "libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_stdcell.lef",
+      "lib": {
+        "typ_1p20V_25C": "libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib",
+        "typ_1p50V_25C": "libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p50V_25C.lib",
+        "slow_1p08V_125C": "libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib",
+        "slow_1p35V_125C": "libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_slow_1p35V_125C.lib",
+        "fast_1p32V_m40C": "libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib",
+        "fast_1p65V_m40C": "libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_fast_1p65V_m40C.lib"
+      }
+    }
+  ],
+  "collateral": {
+    "tech_lef": "libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_tech.lef",
+    "primitives_spice": "libs.tech/ngspice/models/cornerMOSlv.lib",
+    "extract_rules": "vyges-additions/ihp_sg13cmos5l/vyges-extract.rules",
+    "drc_deck": "libs.tech/klayout/tech/drc/ihp-sg13cmos5l.drc",
+    "lvs_deck": "libs.tech/klayout/tech/lvs/sg13cmos5l.lvs"
+  },
+  "description": "Open IHP SG13CMOS-5L 130nm — a simplified, low-cost, CMOS-only variant of the SG13 process. Unlike ihp_sg13g2 (SiGe BiCMOS, HBT), it has NO SiGe HBT bipolar transistors and a reduced back-end: a 5-level metal stack of 4 thin + 1 thick metal (vs SG13G2's 5 thin + 2 thick), and it omits MiM capacitors, the deep-N-well, and Schottky devices. Core std cells characterized at both 1.2V and 1.5V; 3.3V I/O via sg13cmos5l_io. Best fit is cost-sensitive digital and basic analog/mixed-signal; for RF, HBT, MiM-cap, deep-N-well, or Schottky designs use ihp_sg13g2 instead. Origin IHP-GmbH/ihp-sg13cmos5l @ v0.2.0; a dedicated github.com/vyges-tools mirror is pending (versions hand-maintained until then). Name id uses underscore (ihp_sg13cmos5l) per the descriptor name rule. Paths from the v0.2.0 release layout."
+}

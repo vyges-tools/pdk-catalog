@@ -47,6 +47,7 @@ stay hand-maintained.
 | `sky130a` | 130nm | SkyWater | local | [open_pdks](https://github.com/vyges-tools/open_pdks) builder |
 | `gf180mcu` | 180nm | GlobalFoundries | local | [open_pdks](https://github.com/vyges-tools/open_pdks) builder |
 | `ihp_sg13g2` | 130nm SiGe BiCMOS | IHP | local | [ihp-open-pdk](https://github.com/vyges-tools/ihp-open-pdk) |
+| `ihp_sg13cmos5l` | 130nm CMOS-5L (no HBT) | IHP | local | [ihp-sg13cmos5l](https://github.com/IHP-GmbH/ihp-sg13cmos5l) (vyges mirror pending) |
 | `nangate45` | 45nm | Nangate | local | [nangate45](https://github.com/vyges-tools/nangate45) |
 | `asap7` | 7nm (predictive) | ASU | local | [asap7](https://github.com/vyges-tools/asap7) |
 | `icsprout55` | 55nm | icsprout | local | [icsprout55](https://github.com/vyges-tools/icsprout55) |
