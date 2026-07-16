@@ -65,25 +65,6 @@
       "content_hash": "83c2d5c9e990cfa84b66ba130d55053a0ce6f0e94fd2818d9099aa8d19c47ecb"
     },
     {
-      "name": "ihp_sg13cmos5l",
-      "node": "130nm",
-      "foundry": "IHP",
-      "design_types": [
-        "digital",
-        "analog",
-        "mixed-signal"
-      ],
-      "source": "local",
-      "latest": "v0.2.0",
-      "versions": [
-        "v0.1",
-        "v0.2.0"
-      ],
-      "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
-      "mirror": "github.com/vyges-tools/ihp-sg13cmos5l",
-      "content_hash": "c538c1a98d3ccc80975531170ecc3bbc0e914a177937bd0fedb797f50cdf84fe"
-    },
-    {
       "name": "nangate45",
       "node": "45nm",
       "foundry": "Nangate",

@@ -47,10 +47,16 @@ stay hand-maintained.
 | `sky130a` | 130nm | SkyWater | local | [open_pdks](https://github.com/vyges-tools/open_pdks) builder |
 | `gf180mcu` | 180nm | GlobalFoundries | local | [open_pdks](https://github.com/vyges-tools/open_pdks) builder |
 | `ihp_sg13g2` | 130nm SiGe BiCMOS | IHP | local | [ihp-open-pdk](https://github.com/vyges-tools/ihp-open-pdk) |
-| `ihp_sg13cmos5l` | 130nm CMOS-5L (no HBT) | IHP | local | [ihp-sg13cmos5l](https://github.com/IHP-GmbH/ihp-sg13cmos5l) (vyges mirror pending) |
 | `nangate45` | 45nm | Nangate | local | [nangate45](https://github.com/vyges-tools/nangate45) |
 | `asap7` | 7nm (predictive) | ASU | local | [asap7](https://github.com/vyges-tools/asap7) |
 | `icsprout55` | 55nm | icsprout | local | [icsprout55](https://github.com/vyges-tools/icsprout55) |
+
+> **Held out:** IHP SG13CMOS-5L is mirrored at
+> [`vyges-tools/ihp-sg13cmos5l`](https://github.com/vyges-tools/ihp-sg13cmos5l) but is **not**
+> served in the catalog yet. Upstream ([`IHP-GmbH/ihp-sg13cmos5l`](https://github.com/IHP-GmbH/ihp-sg13cmos5l))
+> declares itself temporary dev-storage — a diff-overlay that symlinks shared collateral from a
+> co-located `ihp-sg13g2` — pending IHP's build/compile migration. We re-add it once IHP ships a
+> stable, self-contained release.
 
 Vyges mirrors the non-Ciel open PDKs under `github.com/vyges-tools/` for reproducibility,
 availability, and a consistent data home. sky130 and gf180 are built from the mirrored
