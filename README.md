@@ -51,12 +51,13 @@ stay hand-maintained.
 | `asap7` | 7nm (predictive) | ASU | local | [asap7](https://github.com/vyges-tools/asap7) |
 | `icsprout55` | 55nm | icsprout | local | [icsprout55](https://github.com/vyges-tools/icsprout55) |
 
-> **Held out:** IHP SG13CMOS-5L is mirrored at
-> [`vyges-tools/ihp-sg13cmos5l`](https://github.com/vyges-tools/ihp-sg13cmos5l) but is **not**
-> served in the catalog yet. Upstream ([`IHP-GmbH/ihp-sg13cmos5l`](https://github.com/IHP-GmbH/ihp-sg13cmos5l))
+> **Held out (`status: disabled`):** IHP SG13CMOS-5L is mirrored at
+> [`vyges-tools/ihp-sg13cmos5l`](https://github.com/vyges-tools/ihp-sg13cmos5l) and present in the
+> catalog, but its descriptor carries `status: disabled`, so tools (`vyges pdk-store`) do **not**
+> list or resolve it. Upstream ([`IHP-GmbH/ihp-sg13cmos5l`](https://github.com/IHP-GmbH/ihp-sg13cmos5l))
 > declares itself temporary dev-storage — a diff-overlay that symlinks shared collateral from a
-> co-located `ihp-sg13g2` — pending IHP's build/compile migration. We re-add it once IHP ships a
-> stable, self-contained release.
+> co-located `ihp-sg13g2` — pending IHP's build/compile migration. Flip `status` to `stable` (and
+> re-run `gen_index`) once IHP ships a stable, self-contained release.
 
 Vyges mirrors the non-Ciel open PDKs under `github.com/vyges-tools/` for reproducibility,
 availability, and a consistent data home. sky130 and gf180 are built from the mirrored

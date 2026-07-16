@@ -92,13 +92,25 @@ def main():
     with open(INDEX) as f:
         idx = json.load(f)
 
-    before = json.dumps(idx["pdks"], sort_keys=True)
+    before = json.dumps([idx["pdks"], idx.get("pdk_count")], sort_keys=True)
     tag_cache = {}
     for entry in idx["pdks"]:
         name = entry["name"]
         descriptor = os.path.join(DESCRIPTORS, name + ".vyges-pdk.json")
         if os.path.exists(descriptor):
             entry["content_hash"] = sha256_file(descriptor)
+            # Propagate the descriptor's serving/maturity status into the index
+            # so pdk-store's quick-lookup `list` can exclude/flag it without
+            # fetching each descriptor. Omit the default ("stable") to keep the
+            # index minimal; a `disabled` entry stays in the index but consumers
+            # must not serve it.
+            with open(descriptor) as df:
+                st = json.load(df).get("status", "stable")
+            if st != "stable":
+                entry["status"] = st
+                print("  %s: status=%s" % (name, st))
+            else:
+                entry.pop("status", None)
 
         repo = repo_from_mirror(entry.get("mirror"))
         if repo and repo not in SHARED_BUILDERS:
@@ -115,7 +127,7 @@ def main():
             print("  %s: mirror=%s — versions hand-maintained" % (name, entry.get("mirror")))
 
     idx["pdk_count"] = len(idx["pdks"])
-    after = json.dumps(idx["pdks"], sort_keys=True)
+    after = json.dumps([idx["pdks"], idx["pdk_count"]], sort_keys=True)
     if after == before and idx.get("generated_sha"):
         # Nothing substantive changed — leave the stamps (and the file) as-is so the
         # daily run produces no diff / no commit.

@@ -1,10 +1,10 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-07-16T16:19:36Z",
-  "generated_sha": "226d4138ba7ae7d3dcc7154ce17d7b25cf1a2f57",
+  "generated_at": "2026-07-16T16:43:32Z",
+  "generated_sha": "2db5afa4c5c0e8a9a6cb839e3ab84e477c4333c5",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
-  "pdk_count": 6,
+  "pdk_count": 7,
   "pdks": [
     {
       "name": "sky130a",
@@ -63,6 +63,26 @@
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
       "content_hash": "83c2d5c9e990cfa84b66ba130d55053a0ce6f0e94fd2818d9099aa8d19c47ecb"
+    },
+    {
+      "name": "ihp_sg13cmos5l",
+      "node": "130nm",
+      "foundry": "IHP",
+      "design_types": [
+        "digital",
+        "analog",
+        "mixed-signal"
+      ],
+      "source": "local",
+      "latest": "v0.2.0",
+      "versions": [
+        "v0.1",
+        "v0.2.0"
+      ],
+      "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
+      "mirror": "github.com/vyges-tools/ihp-sg13cmos5l",
+      "content_hash": "1116e0e7589aababefc2810687506caf2124eef2573f813b169657442dc20913",
+      "status": "disabled"
     },
     {
       "name": "nangate45",
