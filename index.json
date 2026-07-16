@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-07-16T15:59:17Z",
-  "generated_sha": "f2e088575727936829a4c988affd880b766eb0d2",
+  "generated_at": "2026-07-16T16:10:31Z",
+  "generated_sha": "92776a57e9afecc393aa863b55c180129082b7df",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 7,
@@ -76,6 +76,7 @@
       "source": "local",
       "latest": "v0.2.0",
       "versions": [
+        "v0.1",
         "v0.2.0"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
