@@ -1,10 +1,10 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
   "generated_at": "2026-07-16T16:19:36Z",
-  "generated_sha": "87968878c6c4129c2bd74d1b643f8cec02cc6d59",
+  "generated_sha": "226d4138ba7ae7d3dcc7154ce17d7b25cf1a2f57",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
-  "pdk_count": 7,
+  "pdk_count": 6,
   "pdks": [
     {
       "name": "sky130a",
