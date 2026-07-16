@@ -49,7 +49,6 @@
   "collateral": {
     "tech_lef": "libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_tech.lef",
     "primitives_spice": "libs.tech/ngspice/models/cornerMOSlv.lib",
-    "extract_rules": "vyges-additions/ihp_sg13cmos5l/vyges-extract.rules",
     "drc_deck": "libs.tech/klayout/tech/drc/ihp-sg13cmos5l.drc",
     "lvs_deck": "libs.tech/klayout/tech/lvs/sg13cmos5l.lvs"
   },
