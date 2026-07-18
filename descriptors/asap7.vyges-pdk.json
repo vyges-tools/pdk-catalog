@@ -111,7 +111,6 @@
     "tech_lef": "lef/asap7_tech_4x_201209.lef",
     "tech_lef_1x": "lef/asap7_tech_1x_201209.lef",
     "primitives_spice": "models/hspice/7nm_TT.pm",
-    "extract_rules": "vyges-additions/asap7/vyges-extract.rules",
     "additional_cell_lef": [
       "lef/asap7sc7p5t_28_L_4x_220121a.lef",
       "lef/asap7sc7p5t_28_SL_4x_220121a.lef",

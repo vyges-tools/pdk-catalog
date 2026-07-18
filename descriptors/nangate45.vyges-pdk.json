@@ -37,8 +37,7 @@
     }
   ],
   "collateral": {
-    "tech_lef": "lef/NangateOpenCellLibrary.tech.lef",
-    "extract_rules": "vyges-additions/nangate45/vyges-extract.rules"
+    "tech_lef": "lef/NangateOpenCellLibrary.tech.lef"
   },
   "description": "Nangate Open Cell Library on a generic 45nm (FreePDK45) tech — educational/research, single-Vt, three corners. No transistor models ship with the cell library, so corners[].models and cell_libraries[].spice are omitted (it is consumed as .lib + tech-LEF); SPICE-level char would need the FreePDK45 models. Canonical OpenROAD-flow-scripts platform layout; root illustrative. Mirrored under github.com/vyges-tools."
 }

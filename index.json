@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-07-18T22:22:33Z",
-  "generated_sha": "925333bc4603ea0a00f830575d98aa1908cb9a2e",
+  "generated_at": "2026-07-18T23:15:59Z",
+  "generated_sha": "152319f56ef1b19c995616e1def1d1714cb57aa4",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 7,
@@ -41,7 +41,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/gf180mcu.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/open_pdks",
-      "content_hash": "9d9dab37d244c91af422a7b0bbf48c9762be661e690f7f9722ffb9acb86b77f1"
+      "content_hash": "d64d2eb1ef4d7a84d5447f81fbd497893114a0d44b3e80b7c7a21bf166245dec"
     },
     {
       "name": "ihp_sg13g2",
@@ -62,7 +62,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "83c2d5c9e990cfa84b66ba130d55053a0ce6f0e94fd2818d9099aa8d19c47ecb"
+      "content_hash": "3ae6b8b4c7e8584cd235269ac817cb521933375e710caae9cbc1d58976f1886b"
     },
     {
       "name": "ihp_sg13cmos5l",
@@ -97,7 +97,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/nangate45.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/nangate45",
-      "content_hash": "5a2ced5541c6b633f95daf84e172c87f8f909ee0b04dff145ec0a4de3980f6d2"
+      "content_hash": "6d1528982336d7e051750eb14b2e2253cf70aedba67694206128b7d8e4b4d544"
     },
     {
       "name": "asap7",
@@ -113,7 +113,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/asap7.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/asap7",
-      "content_hash": "03e5c4e4de0e8d0d3b27644415217d51b8f4267f363047a2e8997f3f7864a4c2"
+      "content_hash": "d776d9d70d1e8cb02efc1a3a3405c47677af112b0695300025f34f8866bf55a7"
     },
     {
       "name": "icsprout55",
