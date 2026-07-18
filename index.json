@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-07-16T16:43:32Z",
-  "generated_sha": "2db5afa4c5c0e8a9a6cb839e3ab84e477c4333c5",
+  "generated_at": "2026-07-18T01:07:50Z",
+  "generated_sha": "523ed2581d18e9ee5de53489a2bab0a8b5af2188",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 7,
@@ -81,8 +81,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-sg13cmos5l",
-      "content_hash": "1116e0e7589aababefc2810687506caf2124eef2573f813b169657442dc20913",
-      "status": "disabled"
+      "content_hash": "87fcca73fe42401b1c5604f11e46b4845e18d356c86e3e05a34cc447e8eacf66"
     },
     {
       "name": "nangate45",
