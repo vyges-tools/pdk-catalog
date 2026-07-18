@@ -5,55 +5,128 @@
   "node": "7nm",
   "foundry": "ASU (ASAP7 predictive)",
   "process": "FinFET (predictive; 7.5-track)",
-  "design_types": ["digital"],
+  "design_types": [
+    "digital"
+  ],
   "source": "local",
   "access": "open",
   "license": "Apache-2.0",
   "maintainers": [
-    { "name": "Vyges", "url": "https://vyges.com/contact", "github": "vyges" }
+    {
+      "name": "Vyges",
+      "url": "https://vyges.com/contact",
+      "github": "vyges"
+    }
   ],
   "root": "$ASAP7_PDK",
   "upstream": {
     "mirror": "github.com/vyges-tools/asap7",
-    "origin": "https://github.com/The-OpenROAD-Project/asap7",
-    "ref": "<pinned-tag>",
-    "license": "BSD-3-Clause-ish (see ASAP7 license)"
+    "note": "This mirror is a COMPOSITE. The process collateral (models, calibre decks, cdslib, asap7ssc7p5t_05) is asap7_pdk_r1p7; the routing/abstract/layout collateral under lef/, gds/ and cdl/ is a pinned subset of asap7sc7p5t_28. The earlier descriptor named the The-OpenROAD-Project/asap7 superproject as origin, which was wrong: that repository is a superproject of submodules and none of its content is here.",
+    "sources": [
+      {
+        "origin": "https://github.com/The-OpenROAD-Project/asap7_pdk_r1p7",
+        "ref": "58d72c9d291e186a77468586ab0c43d8a21eda6a",
+        "date": "2024-07-18",
+        "provides": [
+          "models/",
+          "calibre/",
+          "cdslib/",
+          "asap7ssc7p5t_05/",
+          "docs/"
+        ]
+      },
+      {
+        "origin": "https://github.com/The-OpenROAD-Project/asap7sc7p5t_28",
+        "ref": "875fd1eee58741378d875d9b81c95526a9b8c47c",
+        "date": "2026-04-11",
+        "provides": [
+          "lef/",
+          "gds/",
+          "cdl/",
+          "lib/ (RVT NLDM only)"
+        ]
+      }
+    ],
+    "license": "BSD-3-Clause (Lawrence T. Clark, Vinay Vashishtha, Arizona State University) \u2014 see LICENSE and lef/LICENSE.asap7sc7p5t_28"
   },
   "default_corner": "TT",
-  "default_library": "asap7sc7p5t_rvt",
+  "default_library": "asap7sc7p5t_28_rvt",
   "corners": [
-    { "name": "TT", "process": "tt", "vdd": 0.70, "temp": 25, "models": ["models/hspice/7nm_TT.pm"] },
-    { "name": "SS", "process": "ss", "vdd": 0.63, "temp": 100, "models": ["models/hspice/7nm_SS.pm"] },
-    { "name": "FF", "process": "ff", "vdd": 0.77, "temp": 0, "models": ["models/hspice/7nm_FF.pm"] }
+    {
+      "name": "TT",
+      "process": "tt",
+      "vdd": 0.7,
+      "temp": 25,
+      "models": [
+        "models/hspice/7nm_TT.pm"
+      ]
+    },
+    {
+      "name": "SS",
+      "process": "ss",
+      "vdd": 0.63,
+      "temp": 100,
+      "models": [
+        "models/hspice/7nm_SS.pm"
+      ]
+    },
+    {
+      "name": "FF",
+      "process": "ff",
+      "vdd": 0.77,
+      "temp": 0,
+      "models": [
+        "models/hspice/7nm_FF.pm"
+      ]
+    }
   ],
   "cell_libraries": [
     {
-      "name": "asap7sc7p5t_rvt", "vt": "RVT", "track": "7.5t",
-      "spice": "cdl/asap7sc7p5t_27_R_4x_211101.cdl",
-      "gds": "gds/asap7sc7p5t_27_R_4x_211101.gds",
-      "lef": "lef/asap7sc7p5t_27_R_4x_211101.lef",
+      "name": "asap7sc7p5t_28_rvt",
+      "vt": "RVT",
+      "track": "7.5t",
+      "lef": "lef/asap7sc7p5t_28_R_4x_220121a.lef",
+      "gds": "gds/asap7sc7p5t_28_R_220121a.gds",
+      "spice": "cdl/asap7sc7p5t_28_R.cdl",
       "lib": {
-        "TT": ["lib/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib"],
-        "SS": ["lib/asap7sc7p5t_SIMPLE_RVT_SS_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_RVT_SS_nldm_220123.lib"],
-        "FF": ["lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib"]
-      }
-    },
-    {
-      "name": "asap7sc7p5t_lvt", "vt": "LVT", "track": "7.5t",
-      "spice": "cdl/asap7sc7p5t_28_L_4x_220111.cdl",
-      "gds": "gds/asap7sc7p5t_28_L_4x_220111.gds",
-      "lef": "lef/asap7sc7p5t_28_L_4x_220111.lef",
-      "lib": {
-        "TT": ["lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib"],
-        "SS": ["lib/asap7sc7p5t_SIMPLE_LVT_SS_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_LVT_SS_nldm_220123.lib"],
-        "FF": ["lib/asap7sc7p5t_SIMPLE_LVT_FF_nldm_211120.lib", "lib/asap7sc7p5t_SEQ_LVT_FF_nldm_220123.lib"]
+        "TT": [
+          "lib/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+          "lib/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+          "lib/asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib"
+        ],
+        "SS": [
+          "lib/asap7sc7p5t_SIMPLE_RVT_SS_nldm_211120.lib",
+          "lib/asap7sc7p5t_SEQ_RVT_SS_nldm_220123.lib",
+          "lib/asap7sc7p5t_INVBUF_RVT_SS_nldm_220122.lib"
+        ],
+        "FF": [
+          "lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib",
+          "lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib",
+          "lib/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib"
+        ]
       }
     }
   ],
   "collateral": {
     "tech_lef": "lef/asap7_tech_4x_201209.lef",
+    "tech_lef_1x": "lef/asap7_tech_1x_201209.lef",
     "primitives_spice": "models/hspice/7nm_TT.pm",
-    "extract_rules": "vyges-additions/asap7/vyges-extract.rules"
+    "extract_rules": "vyges-additions/asap7/vyges-extract.rules",
+    "additional_cell_lef": [
+      "lef/asap7sc7p5t_28_L_4x_220121a.lef",
+      "lef/asap7sc7p5t_28_SL_4x_220121a.lef",
+      "lef/asap7sc7p5t_28_SRAM_4x_220121a.lef"
+    ],
+    "additional_cell_gds": [
+      "gds/asap7sc7p5t_28_L_220121a.gds",
+      "gds/asap7sc7p5t_28_SL_220121a.gds",
+      "gds/asap7sc7p5t_28_SRAM_220121a.gds"
+    ],
+    "additional_cell_cdl": [
+      "cdl/asap7sc7p5t_28_L.cdl",
+      "cdl/asap7sc7p5t_28_SL.cdl",
+      "cdl/asap7sc7p5t_28_SRAM.cdl"
+    ]
   },
-  "description": "ASAP7 predictive 7nm FinFET — research/education. Exercises the schema at an advanced node: MULTIPLE Vt cell_libraries (RVT + LVT shown; SLVT + SRAM also ship), split Liberty (per-cell-group files -> lib is an array; abbreviated here to SIMPLE+SEQ, the real PDK ships ~5 groups per corner per Vt), 3 corners, FinFET SPICE + BSIM-CMG models. GOTCHA: drawn at 4x scale (note the *_4x_* collateral) — any consuming flow must apply the 4x. Mirrored under github.com/vyges-tools; root + paths illustrative of asap7_pdk_r1p7."
+  "description": "ASAP7 predictive 7nm FinFET \u2014 research/education. Exercises the schema at an advanced node: MULTIPLE Vt cell_libraries (RVT + LVT shown; SLVT + SRAM also ship), split Liberty (per-cell-group files -> lib is an array; abbreviated here to SIMPLE+SEQ, the real PDK ships ~5 groups per corner per Vt), 3 corners, FinFET SPICE + BSIM-CMG models. GOTCHA: drawn at 4x scale (note the *_4x_* collateral) \u2014 any consuming flow must apply the 4x. Mirrored under github.com/vyges-tools; root + paths illustrative of asap7_pdk_r1p7."
 }
