@@ -38,7 +38,7 @@
   "collateral": {
     "tech_lef": "libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef",
     "primitives_spice": "libs.ref/sky130_fd_pr/spice/sky130.lib.spice",
-    "extract_rules": "vyges-additions/sky130a/vyges-extract.rules",
+    "lvs_device_rules": "vyges-additions/sky130a/vyges-lvs-devices.rules",
     "drc_deck": "libs.tech/klayout/drc/sky130A_mr.drc",
     "lvs_deck": "libs.tech/netgen/sky130A_setup.tcl"
   },
