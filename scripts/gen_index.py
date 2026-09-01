@@ -72,6 +72,19 @@ def version_tags(repo):
     return names
 
 
+def commit_pin(desc):
+    """Return ``<branch>@<sha>`` if the descriptor tracks a BRANCH rather than a release.
+
+    A pinned entry's version index must NOT be derived from the mirror's git tags:
+    ihp-open-pdk carries SG13G2 *release* tags while the tree we serve is its ``dev``
+    branch, so the tags describe something other than what the descriptor points at.
+    Pinned entries therefore stay hand-maintained, and the pin itself is published so
+    a client can resolve the exact tree.
+    """
+    ref = (desc.get("upstream") or {}).get("ref") or ""
+    return ref if "@" in ref else None
+
+
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, "rb") as f:
@@ -97,23 +110,32 @@ def main():
     for entry in idx["pdks"]:
         name = entry["name"]
         descriptor = os.path.join(DESCRIPTORS, name + ".vyges-pdk.json")
+        pin = None
         if os.path.exists(descriptor):
             entry["content_hash"] = sha256_file(descriptor)
+            with open(descriptor) as df:
+                desc = json.load(df)
             # Propagate the descriptor's serving/maturity status into the index
             # so pdk-store's quick-lookup `list` can exclude/flag it without
             # fetching each descriptor. Omit the default ("stable") to keep the
             # index minimal; a `disabled` entry stays in the index but consumers
             # must not serve it.
-            with open(descriptor) as df:
-                st = json.load(df).get("status", "stable")
+            st = desc.get("status", "stable")
             if st != "stable":
                 entry["status"] = st
                 print("  %s: status=%s" % (name, st))
             else:
                 entry.pop("status", None)
+            pin = commit_pin(desc)
+            if pin:
+                entry["pin"] = pin
+            else:
+                entry.pop("pin", None)
 
         repo = repo_from_mirror(entry.get("mirror"))
-        if repo and repo not in SHARED_BUILDERS:
+        if pin:
+            print("  %s: commit-pinned %s — versions hand-maintained" % (name, pin))
+        elif repo and repo not in SHARED_BUILDERS:
             if repo not in tag_cache:
                 tag_cache[repo] = version_tags(repo)
             tags = tag_cache[repo]

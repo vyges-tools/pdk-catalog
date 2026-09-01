@@ -23,6 +23,7 @@ Schema `vyges-pdk-catalog/index-v1`. One row per PDK — a lightweight summary p
 | `latest` / `versions[]` | the **version index** — newest known release + all known releases |
 | `descriptor_url` | raw URL of the full `*.vyges-pdk.json` (the "manifest_url") |
 | `mirror` | the Vyges data mirror, when one exists |
+| `pin` | present when the entry tracks a **branch, not a release** — `<branch>@<sha>`. `latest`/`versions[]` are then hand-maintained, because the mirror's git tags describe something other than the tree being served |
 | `content_hash` | sha256 of the descriptor (lets a client detect changes on refresh) |
 
 `latest` + `versions[]` are what let a client show "↑ vX.Y available" **without a live

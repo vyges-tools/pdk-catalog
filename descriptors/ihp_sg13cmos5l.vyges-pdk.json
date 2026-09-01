@@ -1,6 +1,6 @@
 {
   "x-version": "1.0.0",
-  "version": "v0.2.0",
+  "version": "dev-20260901",
   "name": "ihp_sg13cmos5l",
   "node": "130nm",
   "foundry": "IHP",
@@ -22,9 +22,9 @@
   ],
   "root": "$IHP_PDK_ROOT/ihp-sg13cmos5l",
   "upstream": {
-    "mirror": "github.com/vyges-tools/ihp-sg13cmos5l",
-    "origin": "https://github.com/IHP-GmbH/ihp-sg13cmos5l",
-    "ref": "v0.2.0",
+    "mirror": "github.com/vyges-tools/ihp-open-pdk",
+    "origin": "https://github.com/IHP-GmbH/IHP-Open-PDK",
+    "ref": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299",
     "license": "Apache-2.0 (IHP PDK terms)"
   },
   "depends_on": [
@@ -111,5 +111,5 @@
     "drc_deck": "libs.tech/klayout/tech/drc/ihp-sg13cmos5l.drc",
     "lvs_deck": "libs.tech/klayout/tech/lvs/sg13cmos5l.lvs"
   },
-  "description": "Open IHP SG13CMOS-5L 130nm \u2014 a simplified, low-cost, CMOS-only variant of the SG13 process. Unlike ihp_sg13g2 (SiGe BiCMOS, HBT), it has NO SiGe HBT bipolar transistors and a reduced back-end: a 5-level metal stack of 4 thin + 1 thick metal (vs SG13G2's 5 thin + 2 thick), and it omits MiM capacitors, the deep-N-well, and Schottky devices. Core std cells characterized at both 1.2V and 1.5V; 3.3V I/O via sg13cmos5l_io. Best fit is cost-sensitive digital and basic analog/mixed-signal; for RF, HBT, MiM-cap, deep-N-well, or Schottky designs use ihp_sg13g2 instead. This is a THIN OVERLAY on ihp_sg13g2: ~270 of its device symbols, SPICE/OSDI models, Xyce plugins, and DRC/LVS rule-decks are sibling-relative symlinks (../../../../ihp-sg13g2/...) into the base PDK. It therefore `depends_on` ihp_sg13g2, which must be materialized alongside it under the same root ($IHP_PDK_ROOT/ihp-sg13g2, next to $IHP_PDK_ROOT/ihp-sg13cmos5l) — `vyges pdk-store fetch ihp_sg13cmos5l` fetches ihp_sg13g2 (source=ciel/pdk-releases) first so those symlinks resolve. Origin IHP-GmbH/ihp-sg13cmos5l @ v0.2.0, mirrored at github.com/vyges-tools/ihp-sg13cmos5l. Name id uses underscore (ihp_sg13cmos5l) per the descriptor name rule. Paths from the v0.2.0 release layout."
+  "description": "Open IHP SG13CMOS-5L 130nm — a simplified, low-cost, CMOS-only variant of the SG13 process. Unlike ihp_sg13g2 (SiGe BiCMOS, HBT), it has NO SiGe HBT bipolar transistors and a reduced back-end: a 5-level metal stack of 4 thin + 1 thick metal (vs SG13G2's 5 thin + 2 thick), and it omits MiM capacitors, the deep-N-well, and Schottky devices. Core std cells characterized at both 1.2V and 1.5V; 3.3V I/O via sg13cmos5l_io. Best fit is cost-sensitive digital and basic analog/mixed-signal; for RF, HBT, MiM-cap, deep-N-well, or Schottky designs use ihp_sg13g2 instead. This is a THIN OVERLAY on ihp_sg13g2: ~270 of its device symbols, SPICE/OSDI models, Xyce plugins, and DRC/LVS rule-decks are sibling-relative symlinks (../../../../ihp-sg13g2/...) into the base PDK. It therefore `depends_on` ihp_sg13g2, which must be materialized alongside it under the same root ($IHP_PDK_ROOT/ihp-sg13g2, next to $IHP_PDK_ROOT/ihp-sg13cmos5l) — `vyges pdk-store fetch ihp_sg13cmos5l` fetches ihp_sg13g2 (source=ciel/pdk-releases) first so those symlinks resolve. Name id uses underscore (ihp_sg13cmos5l) per the descriptor name rule. Paths from the dev-branch layout. SOURCE MOVED 2026-09-01: upstream merged the SG13CMOS-5L overlay into IHP-Open-PDK (PR #1124, head ab1510c), so ihp-sg13g2/, ihp-sg13cmos5l/ and ihp-common/ now sit in one tree on that repository's dev branch and ONE commit pin covers base and overlay together. dev is a COMMIT PIN, not a release: it carries no version tags, so quote upstream.ref, never a version number. The tree also carries git submodules under ihp-sg13g2/libs.tech/ — materialize with --recurse-submodules or the PDK is silently incomplete. depends_on(ihp_sg13g2) still holds and is now satisfied by construction rather than by convention: one checkout materializes both siblings, so the ../../ihp-sg13g2/... symlinks resolve without a second fetch. The standalone IHP-GmbH/ihp-sg13cmos5l repo and its github.com/vyges-tools/ihp-sg13cmos5l mirror are SUPERSEDED (mirror sync disabled 2026-09-01); its v0.1/v0.2.0 tags are dropped from the version index because they cannot be resolved against the current mirror."
 }
