@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-09-02T16:14:45Z",
-  "generated_sha": "0cb06bd9c472cbfefa7c6447b4925f580dae6e16",
+  "generated_at": "2026-09-02T16:26:51Z",
+  "generated_sha": "abc2c141836f457280e1bf5f0114c322c53b87f8",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 7,
@@ -54,17 +54,18 @@
         "rf"
       ],
       "source": "local",
-      "latest": "dev-20260901",
+      "latest": "dev-20260902",
       "versions": [
         "v0.1.0",
         "v0.2.0",
         "v0.3.0",
-        "dev-20260901"
+        "dev-20260901",
+        "dev-20260902"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "e0e0195810112ba3155469daf822ab40be9954fdcdc00cbe666115b6930d0e28",
-      "pin": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299"
+      "content_hash": "36f1dd827b3e62da632e06b7e86e5a1d089857f80a652e00ab0779c4aeb5bd56",
+      "pin": "dev@17dc8dc3ca96d6c3d0251f88d1a19f09532c3687"
     },
     {
       "name": "ihp_sg13cmos5l",
@@ -76,14 +77,15 @@
         "mixed-signal"
       ],
       "source": "local",
-      "latest": "dev-20260901",
+      "latest": "dev-20260902",
       "versions": [
-        "dev-20260901"
+        "dev-20260901",
+        "dev-20260902"
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "37e57904ed5140f3f46aa50c285b4ac70addaed0fdc11beb64feac4e162793f4",
-      "pin": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299"
+      "content_hash": "d0f6787cfb2a3a31db050c6c05cca2847a177c17d1beaf7f1e425c5794d81a35",
+      "pin": "dev@17dc8dc3ca96d6c3d0251f88d1a19f09532c3687"
     },
     {
       "name": "nangate45",

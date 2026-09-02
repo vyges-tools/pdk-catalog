@@ -1,6 +1,6 @@
 {
   "x-version": "1.0.0",
-  "version": "dev-20260901",
+  "version": "dev-20260902",
   "name": "ihp_sg13cmos5l",
   "node": "130nm",
   "foundry": "IHP",
@@ -24,7 +24,7 @@
   "upstream": {
     "mirror": "github.com/vyges-tools/ihp-open-pdk",
     "origin": "https://github.com/IHP-GmbH/IHP-Open-PDK",
-    "ref": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299",
+    "ref": "dev@17dc8dc3ca96d6c3d0251f88d1a19f09532c3687",
     "subdir": "ihp-sg13cmos5l",
     "license": "Apache-2.0 (IHP PDK terms)"
   },
