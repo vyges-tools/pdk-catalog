@@ -25,6 +25,7 @@
     "mirror": "github.com/vyges-tools/ihp-open-pdk",
     "origin": "https://github.com/IHP-GmbH/IHP-Open-PDK",
     "ref": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299",
+    "subdir": "ihp-sg13cmos5l",
     "license": "Apache-2.0 (IHP PDK terms)"
   },
   "depends_on": [

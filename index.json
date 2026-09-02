@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-09-01T20:19:22Z",
-  "generated_sha": "a807c22c1e44190a0e8eaf80b67a81958dc463d2",
+  "generated_at": "2026-09-02T16:14:45Z",
+  "generated_sha": "0cb06bd9c472cbfefa7c6447b4925f580dae6e16",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 7,
@@ -63,7 +63,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "5fe13740a9691ff4fd49544a8b14c61db82a21ee9397ac8aedeb88d3fa7fc919",
+      "content_hash": "e0e0195810112ba3155469daf822ab40be9954fdcdc00cbe666115b6930d0e28",
       "pin": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299"
     },
     {
@@ -82,7 +82,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "07ce9845cbf8916e32b01c3e3d91d5ba3695abaae0ddac83ee046fe6f3ba00fa",
+      "content_hash": "37e57904ed5140f3f46aa50c285b4ac70addaed0fdc11beb64feac4e162793f4",
       "pin": "dev@ab1510cbdcbd61fe82e24ec28179c02ea7083299"
     },
     {
