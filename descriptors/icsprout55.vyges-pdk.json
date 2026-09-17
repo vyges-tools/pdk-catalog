@@ -1,6 +1,6 @@
 {
   "x-version": "1.0.0",
-  "version": "v1.10.100",
+  "version": "main-20260917",
   "name": "icsprout55",
   "node": "55nm",
   "foundry": "icsprout",
@@ -22,8 +22,9 @@
   "upstream": {
     "mirror": "github.com/vyges-tools/icsprout55",
     "origin": "https://github.com/openecos-projects/icsprout55-pdk",
-    "ref": "v1.10.100",
-    "license": "Apache-2.0"
+    "ref": "main@68d89edb47847671e18f9e65d66c0cd883995e05",
+    "license": "Apache-2.0",
+    "note": "The mirror tracks upstream `main`, which has DIVERGED from the v1.10.100 release tag \u2014 main is 52 commits ahead and 26 behind it (measured 2026-09-17). The earlier ref `v1.10.100` named a tag the mirror also carries but does NOT serve on its default branch, so a clone of the mirror and a checkout of that tag were two different PDKs under one descriptor. The pin is now the commit the sync actually merges; v1.10.100 stays in the catalog's versions[] because the tag is still fetchable."
   },
   "default_corner": "tt_typ_025C_1v20",
   "default_library": "ics55_LLSC_H7CR",
@@ -189,5 +190,5 @@
   "collateral": {
     "tech_lef": "prtech/techLEF/N551P6M.lef"
   },
-  "description": "Open-ecos icsprout55 55nm PDK (non-Ciel, on-disk). Materialized: tech-LEF + std-cell (RVT/HVT/LVT, H7C) LEF/GDS/Verilog + 7-corner NLDM Liberty (tt/ss/ff with cworst/rcworst/cbest/rcbest RC variants) + IO LEF/GDS/Liberty -> place + STA-signoff-able. Large .lib/.gds are release assets fetched by `make unzip` into $ICSPROUT55_PDK (git mirror carries LEF/CDL/Verilog + the fetch mechanism). Not yet upstream: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated. Mirrored under github.com/vyges-tools."
+  "description": "Open-ecos icsprout55 55nm PDK (non-Ciel, on-disk). Materialized: tech-LEF + std-cell (RVT/HVT/LVT, H7C) LEF/GDS/Verilog + 7-corner NLDM Liberty (tt/ss/ff with cworst/rcworst/cbest/rcbest RC variants) + IO LEF/GDS/Liberty -> place + STA-signoff-able. Large .lib/.gds are release assets fetched by `make unzip` into $ICSPROUT55_PDK (git mirror carries LEF/CDL/Verilog + the fetch mechanism). Not yet upstream: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated. Mirrored under github.com/vyges-tools. PIN: tracks upstream main by commit (not the v1.10.100 tag \u2014 the two have diverged; see upstream.note), so versions[]/latest are hand-maintained."
 }
