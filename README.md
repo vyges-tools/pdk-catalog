@@ -51,6 +51,13 @@ stay hand-maintained.
 | `nangate45` | 45nm | Nangate | local | [nangate45](https://github.com/vyges-tools/nangate45) |
 | `asap7` | 7nm (predictive) | ASU | local | [asap7](https://github.com/vyges-tools/asap7) |
 | `icsprout55` | 55nm | icsprout | local | [icsprout55](https://github.com/vyges-tools/icsprout55) |
+| `gt2n` | 2nm (predictive) | Georgia Tech | local | [gt2n](https://github.com/vyges-tools/gt2n) |
+
+> **Preview (`status: preview`):** `gt2n` is served but flagged — the initial release characterizes a
+> single corner (tt, 0.7 V, 25 C; upstream says 3 corners are under development) and ships no
+> behavioral Verilog and no SRAM. Upstream carries **no git tags**, so the descriptor pins a commit
+> (`main@fe179cb`) and `versions[]` stays hand-maintained — `gen_index` derives versions from a mirror's
+> tags, and tags that do not exist cannot describe the tree being served.
 
 > **Held out (`status: disabled`):** IHP SG13CMOS-5L is mirrored at
 > [`vyges-tools/ihp-sg13cmos5l`](https://github.com/vyges-tools/ihp-sg13cmos5l) and present in the
@@ -66,7 +73,21 @@ availability, and a consistent data home. sky130 and gf180 are built from the mi
 [rtimothyedwards/open_pdks](https://github.com/rtimothyedwards/open_pdks)) and installed
 under `$PDK_ROOT`.
 
-> **`icsprout55`** — the most advanced open node (55nm; ICsprout + College of IC, Zhejiang University + CAS/ECOS). The descriptor is now **fully enriched**: 3 std-cell Vt flavors (RVT/HVT/LVT, H7C) with LEF/GDS/Verilog + a **7-corner NLDM Liberty** set (tt/ss/ff × cworst/rcworst/cbest/rcbest) and the IO library — **13 corners, 4 libraries**, `verify`-clean → **place + STA-sign-off-able**. The large `.lib`/`.gds` are release assets materialized by `make unzip` into `$ICSPROUT55_PDK` (the git mirror carries LEF/CDL/Verilog + the fetch mechanism). Still upstream-pending: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated. **Loom STA smoke-test PASSED (2026-07-03):** Yosys synthesized a design to icsprout55 cells and `vyges-sta-si` timed it against the icsprout55 Liberty — real setup path, WNS MET, TNS 0. Synth/place/STA work on this PDK today; extract/DRC/LVS await the R/C + decks above.
+> **`icsprout55`** — the most advanced *real-foundry* open node (55nm; ICsprout + College of IC, Zhejiang University + CAS/ECOS). The descriptor is now **fully enriched**: 3 std-cell Vt flavors (RVT/HVT/LVT, H7C) with LEF/GDS/Verilog + a **7-corner NLDM Liberty** set (tt/ss/ff × cworst/rcworst/cbest/rcbest) and the IO library — **13 corners, 4 libraries**, `verify`-clean → **place + STA-sign-off-able**. The large `.lib`/`.gds` are release assets materialized by `make unzip` into `$ICSPROUT55_PDK` (the git mirror carries LEF/CDL/Verilog + the fetch mechanism). Still upstream-pending: SPICE/RC models + DRC/LVS decks, so extraction/DRC/LVS remain gated. **Loom STA smoke-test PASSED (2026-07-03):** Yosys synthesized a design to icsprout55 cells and `vyges-sta-si` timed it against the icsprout55 Liberty — real setup path, WNS MET, TNS 0. Synth/place/STA work on this PDK today; extract/DRC/LVS await the R/C + decks above.
+
+> **`gt2n`** — the most advanced node in the catalog, predictive (2nm GAA nanosheet; Prof. Azad Naeemi's group at
+> Georgia Tech, ISCAS 2026 + MLCAD 2026) and the first here with **backside power delivery**:
+> `techlib/gt2_tech.lef` carries BPR + a backside stack (BPR/BV0/BM1..BM4/BRDL) over frontside M0..M6, and
+> `techlib/gt2_fspdn_tech.lef` is the frontside-PDN **alternative** of the same process. Devices are 3-stack
+> nanosheets (NFIN=3, Lg 14 nm) in **2 sheet widths (13/31 nm) x 5 Vt (HVT>SVT>LVT>ULVT>ELVT) = 10 std-cell
+> libraries** of ~69 characterized cells on a 6-track 0.144 um row, each with LEF/GDS/CDL and a tt Liberty.
+> **Gotcha:** the thermal-calibrated device model card is per **width/Vt as well as per corner**
+> (`device/tt/gt2_w31_lvt_tt.sp`), so it does not fit `corners[].models` (shared across cell libraries) —
+> resolve it as `device/<corner>/gt2_<w>_<vt>_<corner>.sp`; `collateral.device_models_dir` points at the tree.
+> Sign-off collateral is **commercial-tool-shaped**: DRC/LVS are Synopsys IC Validator runsets, parasitics are
+> StarRC (`.itf`/`.nxtgrd`) + QRC (`.ict`/`.tch`); no KLayout/Magic/Netgen deck ships, so `vyges-drc` /
+> `vyges-lvs` have nothing to consume yet. Upstream ships an OpenROAD run-script example. Descriptor is
+> `status: preview` — see the note above.
 
 ## Consuming it
 

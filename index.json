@@ -1,10 +1,10 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-09-02T16:26:51Z",
-  "generated_sha": "abc2c141836f457280e1bf5f0114c322c53b87f8",
+  "generated_at": "2026-09-17T15:03:59Z",
+  "generated_sha": "0a7c61381860effefd559b09899d1f1c9c27cd1c",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
-  "pdk_count": 7,
+  "pdk_count": 8,
   "pdks": [
     {
       "name": "sky130a",
@@ -134,6 +134,24 @@
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/icsprout55.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/icsprout55",
       "content_hash": "140a344b552668c10c4c7183199915c5d01d8f94208bc8a06c21adf0502581f7"
+    },
+    {
+      "name": "gt2n",
+      "node": "2nm",
+      "foundry": "Georgia Tech (GT2N predictive)",
+      "design_types": [
+        "digital"
+      ],
+      "source": "local",
+      "latest": "main-20260917",
+      "versions": [
+        "main-20260917"
+      ],
+      "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/gt2n.vyges-pdk.json",
+      "mirror": "github.com/vyges-tools/gt2n",
+      "content_hash": "f503055831b9f9245ab3dcb9246f14a32e9babf03a5092aa5f706cdf69edc929",
+      "status": "preview",
+      "pin": "main@fe179cb2aa424f93a2199a78bbbbed26c738f79c"
     }
   ]
 }

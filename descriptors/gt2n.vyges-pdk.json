@@ -1,0 +1,177 @@
+{
+  "x-version": "1.0.0",
+  "version": "main-20260917",
+  "name": "gt2n",
+  "node": "2nm",
+  "foundry": "Georgia Tech (GT2N predictive)",
+  "process": "GAA nanosheet (3-stack, Lg 14 nm), BPR + BSPDN",
+  "design_types": [
+    "digital"
+  ],
+  "source": "local",
+  "access": "open",
+  "status": "preview",
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "Vyges",
+      "url": "https://vyges.com/contact",
+      "github": "vyges"
+    }
+  ],
+  "root": "$GT2N_PDK",
+  "upstream": {
+    "mirror": "github.com/vyges-tools/gt2n",
+    "origin": "https://github.com/azadnaeemi/GT2N",
+    "ref": "main@fe179cb2aa424f93a2199a78bbbbed26c738f79c",
+    "license": "BSD-3-Clause (Georgia Institute of Technology; Naeemi group)"
+  },
+  "default_corner": "tt_025C_0v70",
+  "default_library": "gt2_6t_w31_lvt",
+  "corners": [
+    {
+      "name": "tt_025C_0v70",
+      "process": "tt",
+      "vdd": 0.7,
+      "temp": 25
+    }
+  ],
+  "cell_libraries": [
+    {
+      "name": "gt2_6t_w31_hvt",
+      "vt": "HVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 31 nm, HVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w31_hvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w31_hvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w31_hvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w31_hvt.gds",
+      "spice": "cdl/gt2_6t_w31_hvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w31_svt",
+      "vt": "SVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 31 nm, SVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w31_svt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w31_svt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w31_svt.lef",
+      "gds": "gds/gt2_6t_std_cells_w31_svt.gds",
+      "spice": "cdl/gt2_6t_w31_svt.cdl"
+    },
+    {
+      "name": "gt2_6t_w31_lvt",
+      "vt": "LVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 31 nm, LVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w31_lvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w31_lvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w31_lvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w31_lvt.gds",
+      "spice": "cdl/gt2_6t_w31_lvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w31_ulvt",
+      "vt": "ULVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 31 nm, ULVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w31_ulvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w31_ulvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w31_ulvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w31_ulvt.gds",
+      "spice": "cdl/gt2_6t_w31_ulvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w31_elvt",
+      "vt": "ELVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 31 nm, ELVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w31_elvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w31_elvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w31_elvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w31_elvt.gds",
+      "spice": "cdl/gt2_6t_w31_elvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w13_hvt",
+      "vt": "HVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 13 nm, HVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w13_hvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w13_hvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w13_hvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w13_hvt.gds",
+      "spice": "cdl/gt2_6t_w13_hvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w13_svt",
+      "vt": "SVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 13 nm, SVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w13_svt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w13_svt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w13_svt.lef",
+      "gds": "gds/gt2_6t_std_cells_w13_svt.gds",
+      "spice": "cdl/gt2_6t_w13_svt.cdl"
+    },
+    {
+      "name": "gt2_6t_w13_lvt",
+      "vt": "LVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 13 nm, LVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w13_lvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w13_lvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w13_lvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w13_lvt.gds",
+      "spice": "cdl/gt2_6t_w13_lvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w13_ulvt",
+      "vt": "ULVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 13 nm, ULVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w13_ulvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w13_ulvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w13_ulvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w13_ulvt.gds",
+      "spice": "cdl/gt2_6t_w13_ulvt.cdl"
+    },
+    {
+      "name": "gt2_6t_w13_elvt",
+      "vt": "ELVT",
+      "track": "6t",
+      "description": "3-stack GAA nanosheet, sheet width 13 nm, ELVT flavor; 6-track (SITE gt2_6t, 0.144 um row height). Device model card for this flavor: device/<corner>/gt2_w13_elvt_<corner>.sp.",
+      "lib": {
+        "tt_025C_0v70": "lib/tt/gt2_6t_w13_elvt_tt_0p7v25c.lib"
+      },
+      "lef": "lef/tt/gt2_6t_w13_elvt.lef",
+      "gds": "gds/gt2_6t_std_cells_w13_elvt.gds",
+      "spice": "cdl/gt2_6t_w13_elvt.cdl"
+    }
+  ],
+  "collateral": {
+    "tech_lef": "techlib/gt2_tech.lef",
+    "tech_lef_fspdn": "techlib/gt2_fspdn_tech.lef",
+    "drc_deck": "icv_runset/gt2_main.drc.rs",
+    "lvs_deck": "icv_runset/gt2_main.lvs.rs",
+    "device_models_dir": "device",
+    "layer_map": "techlib/gt2_techfile.layermap",
+    "layer_map_apr": "techlib/gt2_techfile_apr.layermap",
+    "display_tech_file": "techlib/gt2_techfile.tf",
+    "qrc_ict": "qrc/GT2.ict",
+    "qrc_tech": "qrc/GT2_qrc.tch",
+    "starrc_itf": "nxtgrd/GT2.itf",
+    "starrc_nxtgrd": "nxtgrd/GT2.nxtgrd",
+    "openroad_example": "Openroad_example/gt2n_openroad_runscripts_no_work_20260601.tar.gz"
+  },
+  "description": "GT2N \u2014 open-source 2nm GAA nanosheet PDK from Prof. Azad Naeemi's group at Georgia Tech (ISCAS 2026; PDK/BSPDN/CAD follow-ups at MLCAD 2026). The most advanced node in this catalog (predictive, like asap7 \u2014 not a real-foundry process) and the first here with a BACKSIDE power delivery network: gt2_tech.lef carries the BPR + backside stack (BPR/BV0/BM1..BM4/BRDL) above the frontside M0..M6, and gt2_fspdn_tech.lef is the frontside-PDN variant of the same process \u2014 pick one per design, they are alternatives, not layers of one stack. Devices are 3-stack nanosheets (NFIN=3, Lg 14 nm) in TWO sheet WIDTHS (13 nm / 31 nm) x FIVE Vt flavors (HVT > SVT > LVT > ULVT > ELVT) = 10 std-cell libraries of ~69 characterized cells on a 6-track 0.144 um row. GOTCHA: the thermal-calibrated device model card is per WIDTH/Vt as well as per corner (device/tt/gt2_w31_lvt_tt.sp), so it does NOT fit corners[].models (which is shared across cell libraries) \u2014 resolve it as device/<corner>/gt2_<w>_<vt>_<corner>.sp; collateral.device_models_dir points at the tree. PREVIEW: the initial release characterizes ONE corner (tt, 0.7 V, 25 C) \u2014 README says 3 corners are under development \u2014 and ships no behavioral Verilog and no SRAM (compiler/library announced for a future release). DRC/LVS decks are Synopsys IC Validator runsets and parasitics are StarRC (.itf/.nxtgrd) + QRC (.ict/.tch), i.e. the sign-off collateral is commercial-tool-shaped; no KLayout/Magic/Netgen deck ships, so vyges-drc / vyges-lvs have nothing to consume yet. Mirrored under github.com/vyges-tools/gt2n (daily merge-based upstream sync); upstream carries no tags, so the pin is a commit on main and versions[] stays hand-maintained. Paths are relative to $GT2N_PDK, a clone of that mirror."
+}
