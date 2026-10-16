@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-09-17T15:24:22Z",
-  "generated_sha": "4caaaae0bb9c94d14c45bfa2dce840cfa6719fdf",
+  "generated_at": "2026-10-16T01:34:21Z",
+  "generated_sha": "84586686caddb62100d9d8b1f5baf0268587b9ad",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 8,
@@ -23,7 +23,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/sky130a.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/open_pdks",
-      "content_hash": "42535f074a6ced0537284154bc3a6da0c404d07bdb83643285fc1c02dc32280f"
+      "content_hash": "fee61476951d7c0455eaacbb40251570b23d9e69eab0646f0aea33e446272a98"
     },
     {
       "name": "gf180mcu",
