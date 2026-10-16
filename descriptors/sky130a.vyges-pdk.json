@@ -28,6 +28,7 @@
       "spice": "libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice",
       "gds": "libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds",
       "lef": "libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef",
+      "dont_use": "libs.tech/openlane/sky130_fd_sc_hd/drc_exclude.cells",
       "lib": {
         "tt_025C_1v80": "libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib",
         "ss_n40C_1v60": "libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_n40C_1v60.lib",
