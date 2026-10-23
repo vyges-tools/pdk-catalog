@@ -86,7 +86,7 @@ under `$PDK_ROOT`.
 > resolve it as `device/<corner>/gt2_<w>_<vt>_<corner>.sp`; `collateral.device_models_dir` points at the tree.
 > Sign-off collateral is **commercial-tool-shaped**: DRC/LVS are Synopsys IC Validator runsets, parasitics are
 > StarRC (`.itf`/`.nxtgrd`) + QRC (`.ict`/`.tch`); no KLayout/Magic/Netgen deck ships, so `vyges-drc` /
-> `vyges-lvs` have nothing to consume yet. Upstream ships an OpenROAD run-script example. Descriptor is
+> `vyges-lvs` have nothing to consume yet. The PDK ships a place-and-route run-script example. Descriptor is
 > `status: preview` — see the note above.
 
 ## Consuming it
