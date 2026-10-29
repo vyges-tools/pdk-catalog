@@ -65,6 +65,8 @@
       "name": "sg13g2_stdcell",
       "track": "core 1.2V",
       "spice": "libs.ref/sg13g2_stdcell/cdl/sg13g2_stdcell.cdl",
+      "dont_use": "libs.tech/librelane/sg13g2_stdcell/pnr_exclude.cells",
+      "synth_dont_use": "libs.tech/librelane/sg13g2_stdcell/synth_exclude.cells",
       "gds": "libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds",
       "lef": "libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef",
       "lib": {
@@ -77,6 +79,9 @@
   "collateral": {
     "tech_lef": "libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef",
     "primitives_spice": "libs.tech/ngspice/models/sg13g2.lib",
+    "klayout_tech": "libs.tech/klayout/tech/sg13g2.lyt",
+    "klayout_layer_props": "libs.tech/klayout/tech/sg13g2.lyp",
+    "klayout_layer_map": "libs.tech/klayout/tech/sg13g2.map",
     "drc_deck": "libs.tech/klayout/tech/drc/sg13g2_minimal.lydrc",
     "lvs_deck": "libs.tech/klayout/tech/lvs/sg13g2.lvs"
   },

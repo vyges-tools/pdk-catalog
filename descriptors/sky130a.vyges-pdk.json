@@ -41,6 +41,9 @@
     "tech_lef": "libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef",
     "primitives_spice": "libs.ref/sky130_fd_pr/spice/sky130.lib.spice",
     "lvs_device_rules": "vyges-additions/sky130a/vyges-lvs-devices.rules",
+    "klayout_tech": "libs.tech/klayout/tech/sky130A.lyt",
+    "klayout_layer_props": "libs.tech/klayout/tech/sky130A.lyp",
+    "klayout_layer_map": "libs.tech/klayout/tech/sky130A.map",
     "drc_deck": "libs.tech/klayout/drc/sky130A_mr.drc",
     "lvs_deck": "libs.tech/netgen/sky130A_setup.tcl"
   },

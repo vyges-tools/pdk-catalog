@@ -26,6 +26,8 @@
       "name": "gf180mcu_fd_sc_mcu7t5v0",
       "track": "7-track 5V",
       "spice": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice",
+      "dont_use": "libs.tech/librelane/gf180mcu_fd_sc_mcu7t5v0/pnr_exclude.cells",
+      "synth_dont_use": "libs.tech/librelane/gf180mcu_fd_sc_mcu7t5v0/synth_exclude.cells",
       "gds": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/gds/gf180mcu_fd_sc_mcu7t5v0.gds",
       "lef": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef",
       "lib": {
@@ -38,6 +40,9 @@
   "collateral": {
     "tech_lef": "libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef",
     "primitives_spice": "libs.ref/gf180mcu_fd_pr/spice/gf180mcu.spice",
+    "klayout_tech": "libs.tech/klayout/tech/gf180mcu.lyt",
+    "klayout_layer_props": "libs.tech/klayout/tech/gf180mcu.lyp",
+    "klayout_layer_map": "libs.tech/klayout/tech/gf180mcu.map",
     "drc_deck": "libs.tech/klayout/drc/gf180mcu.drc",
     "lvs_deck": "libs.tech/klayout/lvs/gf180mcu.lvs"
   },

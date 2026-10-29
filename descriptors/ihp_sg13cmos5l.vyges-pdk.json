@@ -94,6 +94,8 @@
       "name": "sg13cmos5l_stdcell",
       "track": "core 1.2V / 1.5V",
       "spice": "libs.ref/sg13cmos5l_stdcell/cdl/sg13cmos5l_stdcell.cdl",
+      "dont_use": "libs.tech/librelane/sg13cmos5l_stdcell/pnr_exclude.cells",
+      "synth_dont_use": "libs.tech/librelane/sg13cmos5l_stdcell/synth_exclude.cells",
       "gds": "libs.ref/sg13cmos5l_stdcell/gds/sg13cmos5l_stdcell.gds",
       "lef": "libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_stdcell.lef",
       "lib": {
@@ -109,6 +111,9 @@
   "collateral": {
     "tech_lef": "libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_tech.lef",
     "primitives_spice": "libs.tech/ngspice/models/cornerMOSlv.lib",
+    "klayout_tech": "libs.tech/klayout/tech/sg13cmos5l.lyt",
+    "klayout_layer_props": "libs.tech/klayout/tech/sg13cmos5l.lyp",
+    "klayout_layer_map": "libs.tech/klayout/tech/sg13cmos5l.map",
     "drc_deck": "libs.tech/klayout/tech/drc/ihp-sg13cmos5l.drc",
     "lvs_deck": "libs.tech/klayout/tech/lvs/sg13cmos5l.lvs"
   },
