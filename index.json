@@ -1,7 +1,7 @@
 {
   "schema": "vyges-pdk-catalog/index-v1",
-  "generated_at": "2026-10-16T05:53:44Z",
-  "generated_sha": "6a099ba2ad9f589688f8feb6d2d38e3bb8f5cbdc",
+  "generated_at": "2026-10-30T11:50:41Z",
+  "generated_sha": "943cb6a8c1a30558c976844f1b742a0b0889ad98",
   "repo": "vyges-tools/pdk-catalog",
   "org": "vyges-tools",
   "pdk_count": 8,
@@ -23,7 +23,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/sky130a.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/open_pdks",
-      "content_hash": "29200e85521160818ff0ac3a5c62277e5e6cf950981369d18245d3e97456dabb"
+      "content_hash": "944a30e8935408001799496c0c9c269fd79083f7724209ff2f439c8638ba561e"
     },
     {
       "name": "gf180mcu",
@@ -41,7 +41,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/gf180mcu.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/open_pdks",
-      "content_hash": "d64d2eb1ef4d7a84d5447f81fbd497893114a0d44b3e80b7c7a21bf166245dec"
+      "content_hash": "80e844b5f81222b6005ce6fb9138b3ea1674ef06e5a1288dc667344524dc71a4"
     },
     {
       "name": "ihp_sg13g2",
@@ -64,7 +64,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13g2.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "36f1dd827b3e62da632e06b7e86e5a1d089857f80a652e00ab0779c4aeb5bd56",
+      "content_hash": "0faabc0d4a5e042ef05b82a45d6a38930e30db022fb3672abaf3b40e2991f290",
       "pin": "dev@17dc8dc3ca96d6c3d0251f88d1a19f09532c3687"
     },
     {
@@ -84,7 +84,7 @@
       ],
       "descriptor_url": "https://raw.githubusercontent.com/vyges-tools/pdk-catalog/main/descriptors/ihp_sg13cmos5l.vyges-pdk.json",
       "mirror": "github.com/vyges-tools/ihp-open-pdk",
-      "content_hash": "d0f6787cfb2a3a31db050c6c05cca2847a177c17d1beaf7f1e425c5794d81a35",
+      "content_hash": "558f6481a8a8277f42fa33403fa337c077160ebd370a237725fba34af89c0dab",
       "pin": "dev@17dc8dc3ca96d6c3d0251f88d1a19f09532c3687"
     },
     {
